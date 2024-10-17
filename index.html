@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felipe Ormazabal - Portfolio</title>
-    <!-- Importando la fuente Oswald desde Google Fonts -->
+    <!-- Fuente Oswald desde Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -32,9 +32,9 @@
             position: relative;
         }
 
-        /* Language Toggle */
+        /* Barra de idioma fija */
         .language-switch {
-            position: absolute;
+            position: fixed;
             top: 20px;
             right: 20px;
             display: flex;
@@ -43,6 +43,7 @@
             padding: 10px 15px;
             border-radius: 30px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 999;
         }
 
         .flag-icon {
@@ -169,13 +170,13 @@
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .portfolio, .education, .services {
+        .portfolio, .education, .services, .experience {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
         }
 
-        .portfolio-item, .education-item, .service-item {
+        .portfolio-item, .education-item, .service-item, .experience-item {
             background-color: #1a1a1a;
             border-radius: 10px;
             overflow: hidden;
@@ -185,25 +186,25 @@
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        .portfolio-item:hover, .education-item:hover, .service-item:hover {
+        .portfolio-item:hover, .education-item:hover, .service-item:hover, .experience-item:hover {
             transform: translateY(-10px);
             box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7);
         }
 
-        .portfolio-item img, .education-item img {
+        .portfolio-item img, .education-item img, .experience-item img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             transition: opacity 0.3s ease;
         }
 
-        .education-item img {
+        .education-item img, .experience-item img {
             width: 100px;
             height: auto;
             margin-bottom: 15px;
         }
 
-        .education-item p, .service-item p {
+        .education-item p, .service-item p, .experience-item p {
             font-size: 1.2em;
         }
 
@@ -275,12 +276,10 @@
 <section id="about">
     <h2 id="about-title">About Me</h2>
     <div class="about-me">
-        <p id="about-text">Soy un profesional con experiencia en el scouting y análisis de fútbol, enfocado en crear e implementar procesos personalizados para la detección y evaluación de talento. He formado parte de equipos de scouting, aportando tanto en la estrategia como en la operación diaria.
+        <p id="about-text">I am a football data analyst with experience in scouting, big data, and creating tools to analyze player performance. I have a strong background in data science and a passion for football.</p>
+        <img src="https://via.placeholder.com/400" alt="Felipe Or
 
-        Mi metodología combina el scouting tradicional, basado en la observación directa y el análisis de vídeo, con herramientas avanzadas de análisis de datos. Tengo experiencia trabajando con diversas fuentes de información, tanto internas como externas, lo que me permite mejorar la precisión en la evaluación del rendimiento de los jugadores y facilitar la toma de decisiones.
-
-        Uno de mis principales intereses es la visualización de datos y el uso de métricas avanzadas para realizar análisis detallados, tanto de equipos como de jugadores individuales. Esto me permite identificar talento de manera más precisa y obtener una comprensión profunda del juego. Estoy en constante búsqueda de nuevas formas de integrar el análisis estadístico con la evaluación de jugadores, con el objetivo de ofrecer soluciones completas en el ámbito del scouting y la mejora del rendimiento.</p>
-        <img src="https://via.placeholder.com/400" alt="Felipe Ormazabal">
+mazabal">
     </div>
 </section>
 
@@ -300,7 +299,24 @@
 
 <section id="experience">
     <h2 id="experience-title">Experience</h2>
-    <p id="experience-text">I have worked as a football data analyst at Deportivo Cuenca, developing scouting methodologies and a data-driven scouting department.</p>
+    <div class="experience">
+        <div class="experience-item">
+            <img src="https://via.placeholder.com/100" alt="Albacete Logo">
+            <p>Albacete</p>
+        </div>
+        <div class="experience-item">
+            <img src="https://via.placeholder.com/100" alt="MLS Logo">
+            <p>MLS</p>
+        </div>
+        <div class="experience-item">
+            <img src="https://via.placeholder.com/100" alt="Deportivo Cuenca Logo">
+            <p>Deportivo Cuenca</p>
+        </div>
+        <div class="experience-item">
+            <img src="https://via.placeholder.com/100" alt="Liga Chilena Logo">
+            <p>Liga Chilena</p>
+        </div>
+    </div>
 </section>
 
 <section id="education">
