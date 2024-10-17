@@ -135,13 +135,13 @@
         }
 
         section {
-            padding: 100px 20px;
+            padding: 50px 20px;
             max-width: 1200px;
             margin: auto;
         }
 
         section h2 {
-            font-size: 3em;
+            font-size: 2.5em;
             color: #1db954;
             margin-bottom: 40px;
             border-bottom: 2px solid #1db954;
@@ -168,31 +168,42 @@
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .portfolio {
+        .portfolio, .education {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
-            margin-top: 50px;
         }
 
-        .portfolio-item {
+        .portfolio-item, .education-item {
             background-color: #1a1a1a;
             border-radius: 10px;
             overflow: hidden;
+            text-align: center;
+            padding: 20px;
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        .portfolio-item:hover {
+        .portfolio-item:hover, .education-item:hover {
             transform: translateY(-10px);
             box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7);
         }
 
-        .portfolio-item img {
+        .portfolio-item img, .education-item img {
             width: 100%;
             height: 200px;
             object-fit: cover;
             transition: opacity 0.3s ease;
+        }
+
+        .education-item img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .education-item p {
+            font-size: 1.2em;
         }
 
         footer {
@@ -219,6 +230,24 @@
             }
         }
 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 3em;
+            }
+
+            .about-me {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 30px 20px;
+            }
+
+            nav a {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
@@ -236,6 +265,7 @@
         <a href="#about" id="nav-about">About Me</a>
         <a href="#portfolio" id="nav-portfolio">Portfolio</a>
         <a href="#experience" id="nav-experience">Experience</a>
+        <a href="#education" id="nav-education">Education</a>
         <a href="#contact" id="nav-contact">Contact</a>
     </nav>
 </header>
@@ -267,8 +297,30 @@
     <p id="experience-text">I have worked as a football data analyst at Deportivo Cuenca, developing scouting methodologies and a data-driven scouting department.</p>
 </section>
 
+<section id="education">
+    <h2>Education</h2>
+    <div class="education">
+        <div class="education-item">
+            <img src="https://via.placeholder.com/100" alt="UA de Chile Logo">
+            <p>Licenciatura en Negocios - UA de Chile</p>
+        </div>
+        <div class="education-item">
+            <img src="https://via.placeholder.com/100" alt="LPDT Logo">
+            <p>Curso de Scout y Big Data - LPDT</p>
+        </div>
+        <div class="education-item">
+            <img src="https://via.placeholder.com/100" alt="UCAM Logo">
+            <p>Máster en Big Data y Scouting - UCAM</p>
+        </div>
+        <div class="education-item">
+            <img src="https://via.placeholder.com/100" alt="MBP School Logo">
+            <p>Curso de Entrenador de Fútbol - MBP School</p>
+        </div>
+    </div>
+</section>
+
 <section id="contact">
-    <h2 id="contact-title">Contact</h2>
+    <h2>Contact</h2>
     <p id="contact-text">Email: felipe@example.com</p>
 </section>
 
@@ -284,12 +336,12 @@
     const navAbout = document.getElementById('nav-about');
     const navPortfolio = document.getElementById('nav-portfolio');
     const navExperience = document.getElementById('nav-experience');
+    const navEducation = document.getElementById('nav-education');
     const navContact = document.getElementById('nav-contact');
     const project1 = document.getElementById('project-1');
     const project2 = document.getElementById('project-2');
     const experienceTitle = document.getElementById('experience-title');
     const experienceText = document.getElementById('experience-text');
-    const contactTitle = document.getElementById('contact-title');
     const contactText = document.getElementById('contact-text');
     const footerText = document.getElementById('footer-text');
 
@@ -302,12 +354,12 @@
             navAbout.textContent = 'Sobre Mí';
             navPortfolio.textContent = 'Portafolio';
             navExperience.textContent = 'Experiencia';
+            navEducation.textContent = 'Estudios';
             navContact.textContent = 'Contacto';
             project1.textContent = 'Herramienta de Scouting';
             project2.textContent = 'Radar de Comparación de Jugadores';
             experienceTitle.textContent = 'Experiencia';
             experienceText.textContent = 'He trabajado como analista de datos en el Deportivo Cuenca, desarrollando metodologías de scouting y un departamento de scouting impulsado por datos.';
-            contactTitle.textContent = 'Contacto';
             contactText.textContent = 'Correo: felipe@example.com';
             footerText.textContent = '© 2024 Felipe Ormazabal | Todos los derechos reservados';
         } else {
@@ -318,12 +370,12 @@
             navAbout.textContent = 'About Me';
             navPortfolio.textContent = 'Portfolio';
             navExperience.textContent = 'Experience';
+            navEducation.textContent = 'Education';
             navContact.textContent = 'Contact';
             project1.textContent = 'Scouting Tool';
             project2.textContent = 'Player Comparison Radar';
             experienceTitle.textContent = 'Experience';
             experienceText.textContent = 'I have worked as a football data analyst at Deportivo Cuenca, developing scouting methodologies and a data-driven scouting department.';
-            contactTitle.textContent = 'Contact';
             contactText.textContent = 'Email: felipe@example.com';
             footerText.textContent = '© 2024 Felipe Ormazabal | All Rights Reserved';
         }
