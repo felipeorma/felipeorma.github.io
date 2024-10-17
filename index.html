@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Ormazabal - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('background-image.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            position: relative;
+        }
+
+        /* Language Toggle */
+        .language-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            background-color: #1e1e1e;
+            padding: 10px 15px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .flag-icon {
+            width: 30px;
+            height: 20px;
+            margin: 0 10px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #1db954;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        header h1 {
+            font-size: 5em;
+            letter-spacing: 5px;
+            animation: fadeInDown 1.5s ease-in-out;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 1.2em;
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #1db954;
+        }
+
+        /* Smooth underline animation */
+        nav a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #1db954;
+            transition: width .3s;
+            margin: 5px auto 0;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 3em;
+            color: #1db954;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #1db954;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .about-me {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-me p {
+            font-size: 1.5em;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .about-me img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .portfolio-item {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        footer {
+            text-align: center;
+            padding: 50px;
+            background-color: #1e1e1e;
+            color: #fff;
+            margin-top: 100px;
+        }
+
+        footer p {
+            font-size: 1.1em;
+        }
+
+        /* Animation */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="language-switch">
+        <img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg" alt="Canada Flag" class="flag-icon">
+        <label class="switch">
+            <input type="checkbox" id="language-toggle">
+            <span class="slider"></span>
+        </label>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg" alt="Spain Flag" class="flag-icon">
+    </div>
+    <h1 id="main-title">Felipe Ormazabal</h1>
+    <nav>
+        <a href="#about" id="nav-about">About Me</a>
+        <a href="#portfolio" id="nav-portfolio">Portfolio</a>
+        <a href="#experience" id="nav-experience">Experience</a>
+        <a href="#contact" id="nav-contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2 id="about-title">About Me</h2>
+    <div class="about-me">
+        <p id="about-text">I am a football data analyst with experience in scouting, big data, and creating tools to analyze player performance. I have a strong background in data science and a passion for football.</p>
+        <img src="https://via.placeholder.com/400" alt="Felipe Ormazabal">
+    </div>
+</section>
+
+<section id="portfolio">
+    <h2 id="portfolio-title">Portfolio</h2>
+    <div class="portfolio">
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/300" alt="Project 1">
+            <p id="project-1">Scouting Tool</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="https://via.placeholder.com/300" alt="Project 2">
+            <p id="project-2">Player Comparison Radar</p>
+        </div>
+    </div>
+</section>
+
+<section id="experience">
+    <h2 id="experience-title">Experience</h2>
+    <p id="experience-text">I have worked as a football data analyst at Deportivo Cuenca, developing scouting methodologies and a data-driven scouting department.</p>
+</section>
+
+<section id="contact">
+    <h2 id="contact-title">Contact</h2>
+    <p id="contact-text">Email: felipe@example.com</p>
+</section>
+
+<footer>
+    <p id="footer-text">&copy; 2024 Felipe Ormazabal | All Rights Reserved</p>
+</footer>
+
+<script>
+    const languageToggle = document.getElementById('language-toggle');
+    const mainTitle = document.getElementById('main-title');
+    const aboutTitle = document.getElementById('about-title');
+    const aboutText = document.getElementById('about-text');
+    const navAbout = document.getElementById('nav-about');
+    const navPortfolio = document.getElementById('nav-portfolio');
+    const navExperience = document.getElementById('nav-experience');
+    const navContact = document.getElementById('nav-contact');
+    const project1 = document.getElementById('project-1');
+    const project2 = document.getElementById('project-2');
+    const experienceTitle = document.getElementById('experience-title');
+    const experienceText = document.getElementById('experience-text');
+    const contactTitle = document.getElementById('contact-title');
+    const contactText = document.getElementById('contact-text');
+    const footerText = document.getElementById('footer-text');
+
+    languageToggle.addEventListener('change', function() {
+        if (this.checked) {
+            // Switch to Spanish
+            mainTitle.textContent = 'Felipe Ormazabal';
+            aboutTitle.textContent = 'Sobre Mí';
+            aboutText.textContent = 'Soy un analista de datos de fútbol con experiencia en scouting, big data y creación de herramientas para analizar el rendimiento de jugadores. Tengo una sólida formación en ciencia de datos y una pasión por el fútbol.';
+            navAbout.textContent = 'Sobre Mí';
+            navPortfolio.textContent = 'Portafolio';
+            navExperience.textContent = 'Experiencia';
+            navContact.textContent = 'Contacto';
+            project1.textContent = 'Herramienta de Scouting';
+            project2.textContent = 'Radar de Comparación de Jugadores';
+            experienceTitle.textContent = 'Experiencia';
+            experienceText.textContent = 'He trabajado como analista de datos en el Deportivo Cuenca, desarrollando metodologías de scouting y un departamento de scouting impulsado por datos.';
+            contactTitle.textContent = 'Contacto';
+            contactText.textContent = 'Correo: felipe@example.com';
+            footerText.textContent = '© 2024 Felipe Ormazabal | Todos los derechos reservados';
+        } else {
+            // Switch to English (default)
+            mainTitle.textContent = 'Felipe Ormazabal';
+            aboutTitle.textContent = 'About Me';
+            aboutText.textContent = 'I am a football data analyst with experience in scouting, big data, and creating tools to analyze player performance. I have a strong background in data science and a passion for football.';
+            navAbout.textContent = 'About Me';
+            navPortfolio.textContent = 'Portfolio';
+            navExperience.textContent = 'Experience';
+            navContact.textContent = 'Contact';
+            project1.textContent = 'Scouting Tool';
+            project2.textContent = 'Player Comparison Radar';
+            experienceTitle.textContent = 'Experience';
+            experienceText.textContent = 'I have worked as a football data analyst at Deportivo Cuenca, developing scouting methodologies and a data-driven scouting department.';
+            contactTitle.textContent = 'Contact';
+            contactText.textContent = 'Email: felipe@example.com';
+            footerText.textContent = '© 2024 Felipe Ormazabal | All Rights Reserved';
+        }
+    });
+</script>
+</body>
+</html>
