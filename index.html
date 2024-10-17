@@ -274,7 +274,11 @@
 <section id="about">
     <h2 id="about-title">About Me</h2>
     <div class="about-me">
-        <p id="about-text">I am a football data analyst with experience in scouting, big data, and creating tools to analyze player performance. I have a strong background in data science and a passion for football.</p>
+        <p id="about-text">Soy un profesional con experiencia en el scouting y análisis de fútbol, enfocado en crear e implementar procesos personalizados para la detección y evaluación de talento. He formado parte de equipos de scouting, aportando tanto en la estrategia como en la operación diaria.
+
+        Mi metodología combina el scouting tradicional, basado en la observación directa y el análisis de vídeo, con herramientas avanzadas de análisis de datos. Tengo experiencia trabajando con diversas fuentes de información, tanto internas como externas, lo que me permite mejorar la precisión en la evaluación del rendimiento de los jugadores y facilitar la toma de decisiones.
+
+        Uno de mis principales intereses es la visualización de datos y el uso de métricas avanzadas para realizar análisis detallados, tanto de equipos como de jugadores individuales. Esto me permite identificar talento de manera más precisa y obtener una comprensión profunda del juego. Estoy en constante búsqueda de nuevas formas de integrar el análisis estadístico con la evaluación de jugadores, con el objetivo de ofrecer soluciones completas en el ámbito del scouting y la mejora del rendimiento.</p>
         <img src="https://via.placeholder.com/400" alt="Felipe Ormazabal">
     </div>
 </section>
@@ -290,4 +294,118 @@
             <img src="https://via.placeholder.com/300" alt="Project 2">
             <p id="project-2">Player Comparison Radar</p>
         </div>
-    </
+    </div>
+</section>
+
+<section id="experience">
+    <h2 id="experience-title">Experience</h2>
+    <p id="experience-text">I have worked as a football data analyst at Deportivo Cuenca, developing scouting methodologies and a data-driven scouting department.</p>
+</section>
+
+<section id="education">
+    <h2>Education</h2>
+    <div class="education">
+        <div class="education-item">
+            <img src="https://via.placeholder.com/100" alt="UA de Chile Logo">
+            <p>Licenciatura en Negocios - UA de Chile</p>
+        </div>
+        <div class="education-item">
+            <img src="https://via.placeholder.com/100" alt="LPDT Logo">
+            <p>Curso de Scout y Big Data - LPDT</p>
+        </div>
+        <div class="education-item">
+            <img src="https://via.placeholder.com/100" alt="UCAM Logo">
+            <p>Máster en Big Data y Scouting - UCAM</p>
+        </div>
+        <div class="education-item">
+            <img src="https://via.placeholder.com/100" alt="MBP School Logo">
+            <p>Curso de Entrenador de Fútbol - MBP School</p>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <div class="services">
+        <div class="service-item">
+            <p><strong>SCOUTING</strong><br>Scouting coordination & player assessment (data).</p>
+        </div>
+        <div class="service-item">
+            <p><strong>DATA ANALYSIS & VIZ</strong><br>Team & opposition analysis, at a team & player level.</p>
+        </div>
+        <div class="service-item">
+            <p><strong>TOOLS & REPORTS</strong><br>Personalized, interactive and automated tools & reports.</p>
+        </div>
+        <div class="service-item">
+            <p><strong>CONSULTANCY</strong><br>To clubs, companies & professionals in the football industry.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <p id="contact-text">Email: felipe@example.com</p>
+</section>
+
+<footer>
+    <p id="footer-text">&copy; 2024 Felipe Ormazabal | All Rights Reserved</p>
+</footer>
+
+<script>
+    const languageToggle = document.getElementById('language-toggle');
+    const mainTitle = document.getElementById('main-title');
+    const aboutTitle = document.getElementById('about-title');
+    const aboutText = document.getElementById('about-text');
+    const navAbout = document.getElementById('nav-about');
+    const navPortfolio = document.getElementById('nav-portfolio');
+    const navExperience = document.getElementById('nav-experience');
+    const navEducation = document.getElementById('nav-education');
+    const navServices = document.getElementById('nav-services');
+    const navContact = document.getElementById('nav-contact');
+    const project1 = document.getElementById('project-1');
+    const project2 = document.getElementById('project-2');
+    const experienceTitle = document.getElementById('experience-title');
+    const experienceText = document.getElementById('experience-text');
+    const contactText = document.getElementById('contact-text');
+    const footerText = document.getElementById('footer-text');
+
+    languageToggle.addEventListener('change', function() {
+        if (this.checked) {
+            // Switch to Spanish
+            mainTitle.textContent = 'Felipe Ormazabal';
+            aboutTitle.textContent = 'Sobre Mí';
+            aboutText.textContent = 'Soy un profesional con experiencia en el scouting y análisis de fútbol, enfocado en crear e implementar procesos personalizados para la detección y evaluación de talento. He formado parte de equipos de scouting, aportando tanto en la estrategia como en la operación diaria. Mi metodología combina el scouting tradicional, basado en la observación directa y el análisis de vídeo, con herramientas avanzadas de análisis de datos. Tengo experiencia trabajando con diversas fuentes de información, tanto internas como externas, lo que me permite mejorar la precisión en la evaluación del rendimiento de los jugadores y facilitar la toma de decisiones. Uno de mis principales intereses es la visualización de datos y el uso de métricas avanzadas para realizar análisis detallados, tanto de equipos como de jugadores individuales. Esto me permite identificar talento de manera más precisa y obtener una comprensión profunda del juego. Estoy en constante búsqueda de nuevas formas de integrar el análisis estadístico con la evaluación de jugadores, con el objetivo de ofrecer soluciones completas en el ámbito del scouting y la mejora del rendimiento.';
+            navAbout.textContent = 'Sobre Mí';
+            navPortfolio.textContent = 'Portafolio';
+            navExperience.textContent = 'Experiencia';
+            navEducation.textContent = 'Estudios';
+            navServices.textContent = 'Servicios';
+            navContact.textContent = 'Contacto';
+            project1.textContent = 'Herramienta de Scouting';
+            project2.textContent = 'Radar de Comparación de Jugadores';
+            experienceTitle.textContent = 'Experiencia';
+            experienceText.textContent = 'He trabajado como analista de datos en el Deportivo Cuenca, desarrollando metodologías de scouting y un departamento de scouting impulsado por datos.';
+            contactText.textContent = 'Correo: felipe@example.com';
+            footerText.textContent = '© 2024 Felipe Ormazabal | Todos los derechos reservados';
+        } else {
+            // Switch to English (default)
+            mainTitle.textContent = 'Felipe Ormazabal';
+            aboutTitle.textContent = 'About Me';
+            aboutText.textContent = 'I am a football data analyst with experience in scouting, big data, and creating tools to analyze player performance. I have a strong background in data science and a passion for football.';
+            navAbout.textContent = 'About Me';
+            navPortfolio.textContent = 'Portfolio';
+            navExperience.textContent = 'Experience';
+            navEducation.textContent = 'Education';
+            navServices.textContent = 'Services';
+            navContact.textContent = 'Contact';
+            project1.textContent = 'Scouting Tool';
+            project2.textContent = 'Player Comparison Radar';
+            experienceTitle.textContent = 'Experience';
+            experienceText.textContent = 'I have worked as a football data analyst at Deportivo Cuenca, developing scouting methodologies and a data-driven scouting department.';
+            contactText.textContent = 'Email: felipe@example.com';
+            footerText.textContent = '© 2024 Felipe Ormazabal | All Rights Reserved';
+        }
+    });
+</script>
+</body>
+</html>
