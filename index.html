@@ -170,31 +170,77 @@
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
         }
 
-        .portfolio, .education, .services, .experience {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+        /* Portafolio automático */
+        .portfolio {
+            display: flex;
+            overflow: hidden;
+            position: relative;
         }
 
-        .portfolio-item, .education-item, .service-item, .experience-item {
+        .portfolio-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: calc(300px * 6); /* Ancho dinámico según la cantidad de imágenes */
+        }
+
+        .portfolio-item {
             background-color: #1a1a1a;
             border-radius: 10px;
             overflow: hidden;
             text-align: center;
             padding: 20px;
+            width: 300px; /* Fijo para mostrar de dos en dos */
             box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
             transition: transform 0.4s ease, box-shadow 0.4s ease;
         }
 
-        .portfolio-item:hover, .education-item:hover, .service-item:hover, .experience-item:hover {
+        .portfolio-item:hover {
             transform: translateY(-10px);
             box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7);
         }
 
-        /* Aquí se aplica el tamaño dinámico a las imágenes de Experience y Education */
-        .experience-item img, .education-item img {
+        .portfolio-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        /* Botones para navegación automática */
+        .portfolio-controls {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .portfolio-controls button {
+            background: #1db954;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 1.5em;
+            color: white;
+            border-radius: 50%;
+        }
+
+        /* Sección Experience: tamaños consistentes */
+        .experience-item img {
             max-width: 100px;
+            max-height: 100px;
+            width: auto;
             height: auto;
+            margin: 0 auto 15px;
+            display: block;
+        }
+
+        .education-item img, .experience-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
             display: block;
             margin: 0 auto 15px;
         }
@@ -275,13 +321,27 @@
 <section id="portfolio">
     <h2 id="portfolio-title">Portfolio</h2>
     <div class="portfolio">
-        <div class="portfolio-item">
-            <img src="https://via.placeholder.com/300" alt="Project 1">
-            <p id="project-1">Scouting Tool</p>
+        <div class="portfolio-track">
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Project 1">
+                <p id="project-1">Scouting Tool</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Project 2">
+                <p id="project-2">Player Comparison Radar</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Project 3">
+                <p id="project-3">Interactive Dashboards</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Project 4">
+                <p id="project-4">Team Analysis Report</p>
+            </div>
         </div>
-        <div class="portfolio-item">
-            <img src="https://via.placeholder.com/300" alt="Project 2">
-            <p id="project-2">Player Comparison Radar</p>
+        <div class="portfolio-controls">
+            <button id="prev-btn">&#9664;</button>
+            <button id="next-btn">&#9654;</button>
         </div>
     </div>
 </section>
@@ -305,33 +365,41 @@
             <img src="https://felipeorma.github.io/imagenes/chile.png" alt="Liga Chilena">
             <p>Liga Chilena</p>
         </div>
+        <div class="experience-item">
+            <img src="https://felipeorma.github.io/imagenes/CanPL.png" alt="Canadian Premier League">
+            <p>Canadian Premier League</p>
+        </div>
     </div>
 </section>
 
 <section id="education">
-    <h2>Education</h2>
+    <h2 id="education-title">Education</h2>
     <div class="education">
         <div class="education-item">
             <img src="https://felipeorma.github.io/imagenes/UA%20CHILE.png" alt="UA de Chile Logo">
-            <p>Licenciatura en Negocios - UA de Chile</p>
+            <p id="education-ua">Licenciatura en Negocios - UA de Chile</p>
         </div>
         <div class="education-item">
             <img src="https://felipeorma.github.io/imagenes/LPDT.png" alt="LPDT Logo">
-            <p>Curso de Scout y Big Data - LPDT</p>
+            <p id="education-lpdt">Curso de Scout y Big Data - LPDT</p>
+        </div>
+        <div class="education-item">
+            <img src="https://felipeorma.github.io/imagenes/objetivo_analista.png" alt="Objetivo Analista Logo">
+            <p id="education-objetivo">Curso Power BI para fútbol - Objetivo Analista</p>
         </div>
         <div class="education-item">
             <img src="https://felipeorma.github.io/imagenes/UCAM_Murcia.jpg" alt="UCAM Logo">
-            <p>Máster en Big Data y Scouting - UCAM</p>
+            <p id="education-ucam">Máster en Big Data y Scouting - UCAM</p>
         </div>
         <div class="education-item">
             <img src="https://felipeorma.github.io/imagenes/MBP.jpg" alt="MBP School Logo">
-            <p>Curso de Entrenador de Fútbol - MBP School</p>
+            <p id="education-mbp">Curso de Entrenador de Fútbol - MBP School</p>
         </div>
     </div>
 </section>
 
 <section id="services">
-    <h2>Services</h2>
+    <h2 id="services-title">Services</h2>
     <div class="services">
         <div class="service-item">
             <p><strong>SCOUTING</strong><br>Scouting coordination & player assessment (data).</p>
@@ -374,6 +442,32 @@
     const experienceText = document.getElementById('experience-text');
     const contactText = document.getElementById('contact-text');
     const footerText = document.getElementById('footer-text');
+    const educationTitle = document.getElementById('education-title');
+    const servicesTitle = document.getElementById('services-title');
+
+    // Variables para el carrusel
+    const track = document.querySelector('.portfolio-track');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    let index = 0;
+
+    function moveCarousel(direction) {
+        const itemWidth = 300; // El ancho de cada item
+        if (direction === 'next') {
+            if (index < track.children.length - 2) { // Solo mueve si hay más elementos
+                index++;
+                track.style.transform = `translateX(-${index * itemWidth}px)`;
+            }
+        } else {
+            if (index > 0) {
+                index--;
+                track.style.transform = `translateX(-${index * itemWidth}px)`;
+            }
+        }
+    }
+
+    prevBtn.addEventListener('click', () => moveCarousel('prev'));
+    nextBtn.addEventListener('click', () => moveCarousel('next'));
 
     languageToggle.addEventListener('change', function() {
         if (this.checked) {
@@ -384,17 +478,18 @@
             navAbout.textContent = 'Sobre Mí';
             navPortfolio.textContent = 'Portafolio';
             navExperience.textContent = 'Experiencia';
-            navEducation.textContent = 'Estudios';
+            navEducation.textContent = 'Educación';
             navServices.textContent = 'Servicios';
             navContact.textContent = 'Contacto';
             project1.textContent = 'Herramienta de Scouting';
             project2.textContent = 'Radar de Comparación de Jugadores';
             experienceTitle.textContent = 'Experiencia';
-            experienceText.textContent = 'He trabajado como analista de datos en el Deportivo Cuenca, desarrollando metodologías de scouting y un departamento de scouting impulsado por datos.';
-            contactText.textContent = 'Correo: felipe@example.com';
+            contactText.textContent = 'Correo: felipe@ejemplo.com';
             footerText.textContent = '© 2024 Felipe Ormazabal | Todos los derechos reservados';
+            educationTitle.textContent = 'Educación';
+            servicesTitle.textContent = 'Servicios';
         } else {
-            // Switch to English (default)
+            // Switch to English
             mainTitle.textContent = 'Felipe Ormazabal';
             aboutTitle.textContent = 'About Me';
             aboutText.textContent = 'I am a football data analyst with experience in scouting, big data, and creating tools to analyze player performance. I have a strong background in data science and a passion for football. I focus on creating and implementing personalized processes for talent identification and evaluation. My methodology combines traditional scouting based on direct observation and video analysis, with advanced data analysis tools. I have worked with various sources of information, both internal and external, improving player performance assessment and decision-making precision. One of my main interests is data visualization and the use of advanced metrics to perform detailed analyses at both the team and individual player levels. I am always looking for ways to integrate statistical analysis with player evaluation to offer complete solutions in scouting and performance improvement.';
@@ -407,9 +502,10 @@
             project1.textContent = 'Scouting Tool';
             project2.textContent = 'Player Comparison Radar';
             experienceTitle.textContent = 'Experience';
-            experienceText.textContent = 'I have worked as a football data analyst at Deportivo Cuenca, developing scouting methodologies and a data-driven scouting department.';
             contactText.textContent = 'Email: felipe@example.com';
             footerText.textContent = '© 2024 Felipe Ormazabal | All Rights Reserved';
+            educationTitle.textContent = 'Education';
+            servicesTitle.textContent = 'Services';
         }
     });
 </script>
