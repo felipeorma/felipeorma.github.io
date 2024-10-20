@@ -173,13 +173,14 @@
         /* Secciones Education y Experience en formato horizontal para escritorio */
         .experience, .education {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
+            white-space: nowrap;
+            overflow: hidden;
         }
 
         .experience-item, .education-item {
             text-align: center;
-            width: 200px;
+            min-width: 200px;
             margin: 20px;
         }
 
@@ -291,7 +292,7 @@
             <input type="checkbox" id="language-toggle">
             <span class="slider"></span>
         </label>
-        <img src="https://en.wikipedia.org/wiki/Flag_of_Chile#/media/File:Flag_of_Chile.svg" alt="Spain Flag" class="flag-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="Chile Flag" class="flag-icon">
     </div>
     <h1 id="main-title">Felipe Ormazabal</h1>
     <nav>
@@ -331,6 +332,14 @@
             <div class="portfolio-item">
                 <img src="https://via.placeholder.com/300" alt="Project 4">
                 <p id="project-4">Team Analysis Report</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Project 5"> <!-- # Añadir imagen -->
+                <p id="project-5">Project 5</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://via.placeholder.com/300" alt="Project 6"> <!-- # Añadir imagen -->
+                <p id="project-6">Project 6</p>
             </div>
         </div>
         <div class="portfolio-controls">
@@ -500,4 +509,3 @@
 </script>
 </body>
 </html>
-
