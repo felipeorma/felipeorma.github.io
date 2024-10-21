@@ -219,6 +219,227 @@
         .portfolio {
             display: flex;
             overflow: hidden;
+            position: relative;<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Ormazabal - Portfolio</title>
+    <!-- Fuente Oswald desde Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Oswald', sans-serif;
+            background-color: #0f0f0f;
+            color: #e0e0e0;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            position: relative;
+        }
+
+        .tools {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .tools p {
+            font-size: 1.2em;
+            color: #e0e0e0; /* Texto gris claro */
+            margin: 10px 0;
+            line-height: 1.6;
+        }
+
+        .tools p strong {
+            color: #1db954; /* Título en verde */
+            font-weight: bold;
+        }
+
+        
+        
+        /* Barra de idioma fija */
+        .language-switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            background-color: #1e1e1e;
+            padding: 10px 15px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+        }
+
+        .flag-icon {
+            width: 30px;
+            height: 20px;
+            margin: 0 10px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #1db954;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        header h1 {
+            font-size: 5em;
+            letter-spacing: 5px;
+            animation: fadeInDown 1.5s ease-in-out;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 1.2em;
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #1db954;
+        }
+
+        /* Smooth underline animation */
+        nav a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #1db954;
+            transition: width .3s;
+            margin: 5px auto 0;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            color: #1db954;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #1db954;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .about-me {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-me p {
+            font-size: 1.5em;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .about-me img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Secciones Education y Experience en formato horizontal para escritorio */
+        .experience, .education {
+            display: flex;
+            justify-content: space-between;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .experience-item, .education-item {
+            text-align: center;
+            min-width: 200px;
+            margin: 20px;
+        }
+
+        .experience-item img, .education-item img {
+            max-width: 100px;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        /* Portafolio automático */
+        .portfolio {
+            display: flex;
+            overflow: hidden;
             position: relative;
         }
 
@@ -499,6 +720,11 @@
     const footerText = document.getElementById('footer-text');
     const educationTitle = document.getElementById('education-title');
     const toolsTitle = document.getElementById('tools-title');
+    const servicesTitle = document.getElementById('services-title');
+
+    // Secciones de Tools y Services
+    const toolsText = document.querySelector('.tools');
+    const servicesText = document.querySelector('.services');
 
     // Variables para el carrusel
     const track = document.querySelector('.portfolio-track');
@@ -545,6 +771,7 @@
             footerText.textContent = '© 2024 Felipe Ormazabal | Todos los derechos reservados';
             educationTitle.textContent = 'Educación';
             toolsTitle.textContent = 'Herramientas';
+            servicesTitle.textContent = 'Servicios';
             
             // Traducción de los títulos de la educación
             document.getElementById('education-ua').innerHTML = 'Ingeniería en<br>Administración de Empresas';
@@ -552,6 +779,24 @@
             document.getElementById('education-objetivo').innerHTML = 'Curso Power BI para Fútbol';
             document.getElementById('education-ucam').innerHTML = 'Máster en Big Data y Scouting';
             document.getElementById('education-mbp').innerHTML = 'Especialista en Scouting<br>y Análisis del Juego';
+
+            // Traducción de Tools
+            toolsText.innerHTML = `
+                <p><strong>Wyscout</strong> - Plataforma líder en análisis de datos y scouting de fútbol.</p>
+                <p><strong>Metrica Play</strong> - Herramienta avanzada de análisis de video para insights tácticos.</p>
+                <p><strong>StatsBomb</strong> - Conjunto de datos integral para análisis profundo de fútbol.</p>
+                <p><strong>R Studio</strong> - Potente herramienta para análisis estadístico y visualización en R.</p>
+                <p><strong>Python</strong> - Lenguaje de programación versátil para análisis de datos en fútbol.</p>
+                <p><strong>Tableau</strong> - Plataforma líder para crear visualizaciones de datos interactivas.</p>
+                <p><strong>PowerBI</strong> - Herramienta robusta para crear informes de inteligencia empresarial.</p>`;
+
+            // Traducción de Services
+            servicesText.innerHTML = `
+                <p><strong>SCOUTING</strong><br>Coordinación de scouting y evaluación de jugadores (datos).</p>
+                <p><strong>ANÁLISIS DE DATOS Y VIZ</strong><br>Análisis de equipos y oponentes, a nivel de equipo y jugador.</p>
+                <p><strong>HERRAMIENTAS Y REPORTES</strong><br>Herramientas y reportes personalizados, interactivos y automatizados.</p>
+                <p><strong>CONSULTORÍA</strong><br>Consultoría para clubes, empresas y profesionales de la industria del fútbol.</p>`;
+
         } else {
             // Switch to English
             mainTitle.textContent = 'Felipe Ormazabal';
@@ -572,15 +817,28 @@
             footerText.textContent = '© 2024 Felipe Ormazabal | All Rights Reserved';
             educationTitle.textContent = 'Education';
             toolsTitle.textContent = 'Tools';
+            servicesTitle.textContent = 'Services';
 
-            // Traducción de los títulos de la educación al inglés
-            document.getElementById('education-ua').innerHTML = 'Engineering in<br>Business Administration';
-            document.getElementById('education-lpdt').innerHTML = 'Scouting and Big Data<br>Course';
-            document.getElementById('education-objetivo').innerHTML = 'Power BI for Football<br>Course';
-            document.getElementById('education-ucam').innerHTML = "Master's in<br>Big Data and Scouting";
-            document.getElementById('education-mbp').innerHTML = 'Specialist in<br>Scouting and Game Analysis';
+            // Traducción de Tools al inglés
+            toolsText.innerHTML = `
+                <p><strong>Wyscout</strong> - A leading platform for football data analysis and scouting.</p>
+                <p><strong>Metrica Play</strong> - An advanced video analysis tool for tactical insights.</p>
+                <p><strong>StatsBomb</strong> - A comprehensive dataset for in-depth football analytics.</p>
+                <p><strong>R Studio</strong> - A powerful tool for statistical analysis and visualization using R.</p>
+                <p><strong>Python</strong> - A versatile programming language for data science and football analytics.</p>
+                <p><strong>Tableau</strong> - A leading platform for creating interactive data visualizations.</p>
+                <p><strong>PowerBI</strong> - A robust tool for creating business intelligence reports and visualizations.</p>`;
+
+            // Traducción de Services al inglés
+            servicesText.innerHTML = `
+                <p><strong>SCOUTING</strong><br>Scouting coordination & player assessment (data).</p>
+                <p><strong>DATA ANALYSIS & VIZ</strong><br>Team & opposition analysis, at a team & player level.</p>
+                <p><strong>TOOLS & REPORTS</strong><br>Personalized, interactive and automated tools & reports.</p>
+                <p><strong>CONSULTANCY</strong><br>To clubs, companies & professionals in the football industry.</p>`;
         }
     });
+</script>
+
 </script>
 </body>
 </html>
