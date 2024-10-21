@@ -364,8 +364,8 @@
 
         @media (max-width: 768px) {
             .portfolio-item {
-                width: 100%; /* Ocupa toda la fila en pantallas pequeñas */
-                margin-bottom: 20px; /* Añade un margen inferior para separar los elementos */
+                width: 100%; /* Mostrar un solo elemento del portafolio por fila */
+                margin-bottom: 20px;
             }
         }
 
@@ -382,6 +382,48 @@
                 margin: 10px 0; /* Añadir margen entre los enlaces */
             }
         }
+
+        /* Estilos del modal */
+        .modal {
+            display: none; /* Por defecto, oculto */
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Botón de cerrar el modal */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            color: #fff;
+            font-size: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+        }
+
 
 
 
@@ -445,29 +487,42 @@
     <div class="portfolio">
         <div class="portfolio-track">
             <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/scouting-tool.png" alt="Project 1">
+                <img src="https://felipeorma.github.io/imagenes/scouting-tool.png" alt="Scouting Tool">
                 <p id="project-1">Scouting Tool</p>
             </div>
             <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300" alt="Project 2">
+                <img src="https://felipeorma.github.io/imagenes/RADAR.jpeg" alt="Player Comparison Radar">
                 <p id="project-2">Player Comparison Radar</p>
             </div>
             <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300" alt="Project 3">
+                <img src="https://felipeorma.github.io/imagenes/dashboard.png" alt="Interactive Dashboards">
                 <p id="project-3">Interactive Dashboards</p>
             </div>
             <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300" alt="Project 4">
+                <img src="https://felipeorma.github.io/imagenes/post-match-report.jpeg" alt="PostMatch Analysis Report">
                 <p id="project-4">Team Analysis Report</p>
             </div>
             <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300" alt="Project 5">
-                <p id="project-5">Project 5</p>
+                <img src="https://felipeorma.github.io/imagenes/dt-analysis.png" alt="DT Analysis">
+                <p id="project-5">DT Analysis</p>
             </div>
             <div class="portfolio-item">
-                <img src="https://via.placeholder.com/300" alt="Project 6">
-                <p id="project-6">Project 6</p>
+                <img src="https://felipeorma.github.io/imagenes/league stats.jpeg" alt="League Analysis">
+                <p id="project-6">League Analysis</p>
             </div>
+            <div class="portfolio-item">
+                <img src="https://felipeorma.github.io/imagenes/SHOTMAP.jpeg" alt="Team ShotMap">
+                <p id="project-7">Team ShotMap</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://felipeorma.github.io/imagenes/SHOTS.jpeg" alt="Team ShotMap">
+                <p id="project-8">Player ShotMap</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="https://felipeorma.github.io/imagenes/team-analysis.png" alt="Team Analysis">
+                <p id="project-9">Team Analysis</p>
+            </div>
+            
         </div>
         <div class="portfolio-controls">
             <button id="prev-btn">&#9664;</button>
@@ -617,9 +672,11 @@
             project2.textContent = 'Radar de Comparación de Jugadores';
             project3.textContent = 'Dashboards Interactivos';
             project4.textContent = 'Informe de Análisis de Equipo';
-            project5.textContent = 'Proyecto 5';
-            project6.textContent = 'Proyecto 6';
-
+            project5.textContent = 'Análisis de DT';
+            project6.textContent = 'Análisis de Liga';
+            project6.textContent = 'Shotmap del equipo';
+            project6.textContent = 'Shotmap de jugagor';
+            project6.textContent = 'Análisis de equipo';
             // Experiencia
             experienceTitle.textContent = 'Experiencia';
 
@@ -680,8 +737,12 @@
             project2.textContent = 'Player Comparison Radar';
             project3.textContent = 'Interactive Dashboards';
             project4.textContent = 'Team Analysis Report';
-            project5.textContent = 'Project 5';
-            project6.textContent = 'Project 6';
+            project5.textContent = 'DT Analysis';
+            project6.textContent = 'League Analysis';
+            project7.textContent = 'Team ShotMap';
+            project8.textContent = 'Player ShotMap';
+            project9.textContent = 'Team Analysis'
+
 
             // Experiencia
             experienceTitle.textContent = 'Experience';
@@ -726,7 +787,94 @@
     });
 </script>
 
+<!-- Modal para mostrar las imágenes en tamaño completo -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Expanded Image">
+    </div>
+</div>
 
+<!-- Modal para mostrar las imágenes en tamaño completo -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Expanded Image">
+    </div>
+</div>
+
+<style>
+    /* Estilos del modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .modal-content img {
+        width: 85%; /* Ajusta el tamaño según lo necesites */
+        max-width: 600px; /* Ancho máximo */
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Botón de cerrar el modal */
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 25px;
+        color: #fff;
+        font-size: 30px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+    }
+</style>
+
+<script>
+    // Obtener el modal y el contenido de la imagen
+    const modal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeBtn = document.querySelector('.close');
+
+    // Agregar un event listener para cada imagen del portafolio
+    document.querySelectorAll('.portfolio-item img').forEach(img => {
+        img.addEventListener('click', function() {
+            modal.style.display = 'flex';  // Mostrar el modal
+            modalImage.src = this.src;     // Cambiar la imagen del modal a la imagen seleccionada
+        });
+    });
+
+    // Cuando se hace clic en el botón de cerrar, se cierra el modal
+    closeBtn.addEventListener('click', function() {
+        modal.style.display = 'none';
+    });
+
+    // Cerrar el modal cuando se hace clic fuera de la imagen
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+</script>
 
 </body>
 </html>
+
+
