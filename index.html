@@ -259,41 +259,20 @@
 
         /* Portafolio automático */
         .portfolio {
-            display: flex;
-            overflow: hidden;
             position: relative;
+            overflow: hidden; /* Oculta el contenido que sale del área visible */
         }
 
         .portfolio-track {
             display: flex;
-            transition: transform 0.5s ease-in-out;
-            width: max-content; /* Ajustar el ancho según el contenido */
+            transition: transform 0.5s ease; /* Transición suave cuando se mueve el track */
         }
 
         .portfolio-item {
-            background-color: #1a1a1a;
-            border-radius: 10px;
-            overflow: hidden;
-            text-align: center;
-            padding: 20px;
-            width: 300px; /* Fijo para mostrar de dos en dos */
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            min-width: 300px; /* Ancho fijo para cada item */
+            margin: 0 10px;
         }
 
-        .portfolio-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.7);
-        }
-
-        .portfolio-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
-
-        /* Botones para navegación automática */
         .portfolio-controls {
             position: absolute;
             top: 50%;
@@ -302,16 +281,21 @@
             display: flex;
             justify-content: space-between;
             transform: translateY(-50%);
+            z-index: 10;
         }
 
-        .portfolio-controls button {
-            background: #1db954;
+        .control-btn {
+            background-color: #1db954;
             border: none;
+            color: white;
+            font-size: 24px;
             padding: 10px;
             cursor: pointer;
-            font-size: 1.5em;
-            color: white;
             border-radius: 50%;
+        }
+
+        .control-btn:hover {
+            background-color: #17a44a;
         }
 
         footer {
@@ -322,7 +306,7 @@
             margin-top: 100px;
         }
 
-        footer p {
+        footer p {  
             font-size: 1.1em;
         }
 
@@ -485,7 +469,7 @@
 <section id="portfolio">
     <h2 id="portfolio-title">Portfolio</h2>
     <div class="portfolio">
-        <div class="portfolio-track">
+        <div class="portfolio-track" id="portfolioTrack">
             <div class="portfolio-item">
                 <img src="https://felipeorma.github.io/imagenes/scouting-tool.png" alt="Scouting Tool">
                 <p id="project-1">Scouting Tool</p>
@@ -522,11 +506,10 @@
                 <img src="https://felipeorma.github.io/imagenes/team-analysis.png" alt="Team Analysis">
                 <p id="project-9">Team Analysis</p>
             </div>
-            
         </div>
         <div class="portfolio-controls">
-            <button id="prev-btn">&#9664;</button>
-            <button id="next-btn">&#9654;</button>
+            <button id="prev-btn" class="control-btn">&#9664;</button> <!-- Left Button -->
+            <button id="next-btn" class="control-btn">&#9654;</button> <!-- Right Button -->
         </div>
     </div>
 </section>
@@ -798,15 +781,6 @@
     </div>
 </div>
 
-
-<!-- Modal para mostrar las imágenes en tamaño completo -->
-<div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <div class="modal-content">
-        <img id="modalImage" src="" alt="Expanded Image">
-    </div>
-</div>
-
 <style>
     /* Estilos del modal */
     .modal {
@@ -876,6 +850,52 @@
     .close:focus {
         color: #bbb;
     }
+
+    /* Asegurarse de que el botón de cerrar esté en relación a la imagen */
+    .modal-content {
+        position: relative; /* Para que el botón se posicione respecto a la imagen */
+    }
+
+    /* Estilos para la navegación del portafolio */
+    .portfolio {
+        position: relative;
+        overflow: hidden; /* Oculta el contenido que sale del área visible */
+    }
+
+    .portfolio-track {
+        display: flex;
+        transition: transform 0.5s ease; /* Transición suave cuando se mueve el track */
+    }
+
+    .portfolio-item {
+        min-width: 300px; /* Ancho fijo para cada item */
+        margin: 0 10px;
+    }
+
+    .portfolio-controls {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .control-btn {
+        background-color: #1db954;
+        border: none;
+        color: white;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .control-btn:hover {
+        background-color: #17a44a;
+    }
 </style>
 
 <script>
@@ -884,7 +904,7 @@
     const modalImage = document.getElementById('modalImage');
     const closeBtn = document.querySelector('.close');
 
-    // Agregar botones de navegación
+    // Agregar botones de navegación para el modal
     const prevBtn = document.createElement('button');
     prevBtn.classList.add('modal-prev');
     prevBtn.innerHTML = '&#9664;'; // Flecha hacia la izquierda
@@ -911,7 +931,7 @@
         });
     });
 
-    // Event listener para los botones de navegación
+    // Event listener para los botones de navegación dentro del modal
     prevBtn.addEventListener('click', function() {
         if (currentImageIndex > 0) {
             showImage(currentImageIndex - 1); // Mostrar imagen anterior
@@ -939,9 +959,31 @@
             modal.style.display = 'none';
         }
     });
-</script>
 
+    // JavaScript para la navegación del portafolio antes de abrir el modal
+    const portfolioTrack = document.querySelector('.portfolio-track');
+    const prevPortfolioBtn = document.getElementById('prev-btn');
+    const nextPortfolioBtn = document.getElementById('next-btn');
+    let position = 0;
+    const itemWidth = 320; // El ancho de cada item + margen
+
+    // Evento para el botón de 'previo' en el portafolio
+    prevPortfolioBtn.addEventListener('click', () => {
+        if (position < 0) {
+            position += itemWidth; // Desplazar hacia la derecha
+            portfolioTrack.style.transform = `translateX(${position}px)`;
+        }
+    });
+
+    // Evento para el botón de 'siguiente' en el portafolio
+    nextPortfolioBtn.addEventListener('click', () => {
+        const maxPosition = -(itemWidth * (portfolioTrack.children.length - 3)); // Mover hasta el final
+        if (position > maxPosition) {
+            position -= itemWidth; // Desplazar hacia la izquierda
+            portfolioTrack.style.transform = `translateX(${position}px)`;
+        }
+    });
+</script>
 
 </body>
 </html>
-
