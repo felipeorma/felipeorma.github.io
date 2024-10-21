@@ -121,7 +121,7 @@
         }
 
         .portfolio-item img {
-            width: 100%;
+            width: 50%;
             height: 200px; /* Establece la altura fija */
             object-fit: cover; /* Asegura que la imagen se ajuste correctamente sin deformarse */
             margin-bottom: 15px;
@@ -267,7 +267,7 @@
         .portfolio-track {
             display: flex;
             transition: transform 0.5s ease-in-out;
-            width: calc(300px * 6); /* Ancho dinámico según la cantidad de imágenes */
+            width: calc(50% * 6); /* Ancho dinámico según la cantidad de imágenes y ajustado al 50% */
         }
 
         .portfolio-item {
@@ -364,7 +364,7 @@
 
         @media (max-width: 768px) {
             .portfolio-item {
-                width: 100%; /* Mostrar un solo elemento del portafolio por fila */
+                width: 50%; /* Mostrar un solo elemento del portafolio por fila */
                 margin-bottom: 20px;
             }
         }
@@ -795,13 +795,6 @@
     </div>
 </div>
 
-<!-- Modal para mostrar las imágenes en tamaño completo -->
-<div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <div class="modal-content">
-        <img id="modalImage" src="" alt="Expanded Image">
-    </div>
-</div>
 
 <style>
     /* Estilos del modal */
@@ -824,10 +817,10 @@
     }
 
     .modal-content img {
-        width: 85%; /* Ajusta el tamaño según lo necesites */
-        max-width: 600px; /* Ancho máximo */
-        height: auto;
-        border-radius: 8px;
+        width: 85%; /* Ajusta el tamaño a un 85% del ancho de la pantalla */
+        max-width: 600px; /* Asegura que el ancho máximo de la imagen no exceda los 600px */
+        height: auto; /* Mantén la proporción original de la imagen */
+        border-radius: 8px; /* Mantén los bordes redondeados */
     }
 
     /* Botón de cerrar el modal */
@@ -876,5 +869,3 @@
 
 </body>
 </html>
-
-
