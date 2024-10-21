@@ -515,7 +515,7 @@
         </div>
         <div class="education-item">
             <img src="https://felipeorma.github.io/imagenes/MBP.jpg" alt="MBP School Logo">
-            <p id="education-mbp">Specialist in<br>Scouting and     Game Analysis</p>
+            <p id="education-mbp">Specialist in<br>Scouting and Game Analysis</p>
         </div>
     </div>
 </section>
@@ -572,9 +572,13 @@
     const navContact = document.getElementById('nav-contact');
     const project1 = document.getElementById('project-1');
     const project2 = document.getElementById('project-2');
+    const project3 = document.getElementById('project-3');
+    const project4 = document.getElementById('project-4');
+    const project5 = document.getElementById('project-5');
+    const project6 = document.getElementById('project-6');
     const experienceTitle = document.getElementById('experience-title');
     const contactTitle = document.getElementById('contact-title');
-    const contactText = document.getElementById('contact-text');
+    const contactText = document.querySelector('.contact-info');
     const footerText = document.getElementById('footer-text');
     const educationTitle = document.getElementById('education-title');
     const toolsTitle = document.getElementById('tools-title');
@@ -584,146 +588,137 @@
     const toolsText = document.querySelector('.tools');
     const servicesText = document.querySelector('.services');
 
-    // Variables para el carrusel
-    const track = document.querySelector('.portfolio-track');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    let index = 0;
-
-    function moveCarousel(direction) {
-        const itemWidth = 300; // El ancho de cada item
-        if (direction === 'next') {
-            if (index < track.children.length - 2) { // Solo mueve si hay más elementos
-                index++;
-                track.style.transform = `translateX(-${index * itemWidth}px)`;
-            }
-        } else {
-            if (index > 0) {
-                index--;
-                track.style.transform = `translateX(-${index * itemWidth}px)`;
-            }
-        }
-    }
-
-    prevBtn.addEventListener('click', () => moveCarousel('prev'));
-    nextBtn.addEventListener('click', () => moveCarousel('next'));
-
     languageToggle.addEventListener('change', function() {
-    if (this.checked) {
-        // Switch to Spanish
-        mainTitle.textContent = 'Felipe Ormazabal'; // Ya está correcto
-        aboutTitle.textContent = 'Sobre Mí'; // Traducción
-        aboutText.textContent = 'Soy un profesional con experiencia en el scouting y análisis de fútbol, enfocado en crear e implementar procesos personalizados para la detección y evaluación de talento. He formado parte de equipos de scouting, aportando tanto en la estrategia como en la operación diaria. Mi metodología combina el scouting tradicional, basado en la observación directa y el análisis de vídeo, con herramientas avanzadas de análisis de datos. Tengo experiencia trabajando con diversas fuentes de información, tanto internas como externas, lo que me permite mejorar la precisión en la evaluación del rendimiento de los jugadores y facilitar la toma de decisiones. Uno de mis principales intereses es la visualización de datos y el uso de métricas avanzadas para realizar análisis detallados, tanto de equipos como de jugadores individuales. Estoy en constante búsqueda de nuevas formas de integrar el análisis estadístico con la evaluación de jugadores, con el objetivo de ofrecer soluciones completas en el ámbito del scouting y la mejora del rendimiento.'; // Traducción completa
+        if (this.checked) {
+            // Cambiar todo el contenido a español
+            mainTitle.textContent = 'Felipe Ormazabal'; 
+            aboutTitle.textContent = 'Sobre Mí';
+            aboutText.textContent = 'Soy un profesional con experiencia en el scouting y análisis de fútbol, enfocado en crear e implementar procesos personalizados para la detección y evaluación de talento. He trabajado con diversos equipos y herramientas para optimizar el rendimiento de los jugadores y mejorar la toma de decisiones estratégicas. Mi metodología combina observación directa, análisis de video, y herramientas avanzadas de análisis de datos. Estoy en constante búsqueda de nuevas formas de integrar el análisis estadístico en la evaluación de jugadores, con el objetivo de ofrecer soluciones completas en el ámbito del scouting y el rendimiento deportivo.';
 
-        // Traducción de los textos de navegación
-        navAbout.textContent = 'Sobre Mí';
-        navPortfolio.textContent = 'Portafolio';
-        navExperience.textContent = 'Experiencia';
-        navEducation.textContent = 'Educación';
-        navServices.textContent = 'Servicios';
-        navTools.textContent = 'Herramientas';
-        navContact.textContent = 'Contacto';
+            // Navegación
+            navAbout.textContent = 'Sobre Mí';
+            navPortfolio.textContent = 'Portafolio';
+            navExperience.textContent = 'Experiencia';
+            navEducation.textContent = 'Educación';
+            navServices.textContent = 'Servicios';
+            navTools.textContent = 'Herramientas';
+            navContact.textContent = 'Contacto';
 
-        // Traducción de los proyectos en el portafolio
-        project1.textContent = 'Herramienta de Scouting';
-        project2.textContent = 'Radar de Comparación de Jugadores';
+            // Portafolio
+            project1.textContent = 'Herramienta de Scouting';
+            project2.textContent = 'Radar de Comparación de Jugadores';
+            project3.textContent = 'Dashboards Interactivos';
+            project4.textContent = 'Informe de Análisis de Equipo';
+            project5.textContent = 'Proyecto 5';
+            project6.textContent = 'Proyecto 6';
 
-        // Traducción de la experiencia
-        experienceTitle.textContent = 'Experiencia';
+            // Experiencia
+            experienceTitle.textContent = 'Experiencia';
 
-        // Traducción del contacto
-        contactTitle.textContent = 'Contacto';
-        contactText.textContent = 'Correo: felipeormazab@gmail.com';
+            // Contacto
+            contactTitle.textContent = 'Contacto';
+            contactText.innerHTML = `
+                <p>Correo: <a href="mailto:felipeormazab@gmail.com">felipeormazab@gmail.com</a></p>
+                <p>Conéctate conmigo en <a href="https://www.linkedin.com/in/felipe-ormazabal-835037226/" target="_blank">LinkedIn</a></p>
+            `;
 
-        // Traducción del pie de página
-        footerText.textContent = '© 2024 Felipe Ormazabal | Todos los derechos reservados';
+            // Pie de página
+            footerText.textContent = '© 2024 Felipe Ormazabal | Todos los derechos reservados';
 
-        // Traducción de educación
-        educationTitle.textContent = 'Educación';
-        document.getElementById('education-ua').innerHTML = 'Ingeniería en Administración de Empresas<br>UA de Chile';
-        document.getElementById('education-lpdt').innerHTML = 'Curso de Scouting y Big Data<br>LPDT';
-        document.getElementById('education-objetivo').innerHTML = 'Curso Power BI para Fútbol<br>Objetivo Analista';
-        document.getElementById('education-ucam').innerHTML = 'Máster en Big Data y Scouting<br>UCAM';
-        document.getElementById('education-mbp').innerHTML = 'Especialista en Scouting y Análisis del Juego<br>MBP School';
+            // Educación
+            educationTitle.textContent = 'Educación';
+            document.getElementById('education-ua').innerHTML = 'Ingeniería en<br>Administración de Empresas';
+            document.getElementById('education-lpdt').innerHTML = 'Curso de <br>Scouting y Big Data';
+            document.getElementById('education-objetivo').innerHTML = 'Curso<br>Power BI para Fútbol';
+            document.getElementById('education-ucam').innerHTML = 'Máster en<br>Big Data y Scouting';
+            document.getElementById('education-mbp').innerHTML = 'Especialista en<br>Scouting y Análisis del Juego';
 
-        // Traducción de Tools
-        toolsTitle.textContent = 'Herramientas';
-        toolsText.innerHTML = `
-            <p><strong>Wyscout</strong> - Plataforma líder en análisis de datos y scouting de fútbol.</p>
-            <p><strong>Metrica Play</strong> - Herramienta avanzada de análisis de video para insights tácticos.</p>
-            <p><strong>StatsBomb</strong> - Conjunto de datos integral para análisis profundo de fútbol.</p>
-            <p><strong>R Studio</strong> - Potente herramienta para análisis estadístico y visualización en R.</p>
-            <p><strong>Python</strong> - Lenguaje de programación versátil para análisis de datos en fútbol.</p>
-            <p><strong>Tableau</strong> - Plataforma líder para crear visualizaciones de datos interactivas.</p>
-            <p><strong>PowerBI</strong> - Herramienta robusta para crear informes de inteligencia empresarial.</p>`;
+            // Tools
+            toolsTitle.textContent = 'Herramientas';
+            toolsText.innerHTML = `
+                <p><strong>Wyscout</strong> - Plataforma líder en análisis de datos y scouting de fútbol.</p>
+                <p><strong>Metrica Play</strong> - Herramienta avanzada de análisis de video para insights tácticos.</p>
+                <p><strong>StatsBomb</strong> - Conjunto de datos integral para análisis profundo de fútbol.</p>
+                <p><strong>R Studio</strong> - Potente herramienta para análisis estadístico y visualización en R.</p>
+                <p><strong>Python</strong> - Lenguaje de programación versátil para análisis de datos en fútbol.</p>
+                <p><strong>Tableau</strong> - Plataforma líder para crear visualizaciones de datos interactivas.</p>
+                <p><strong>PowerBI</strong> - Herramienta robusta para crear informes de inteligencia empresarial.</p>`;
 
-        // Traducción de Services
-        servicesTitle.textContent = 'Servicios';
-        servicesText.innerHTML = `
-            <p><strong>SCOUTING</strong><br>Coordinación de scouting y evaluación de jugadores (datos).</p>
-            <p><strong>ANÁLISIS DE DATOS Y VIZ</strong><br>Análisis de equipos y oponentes, a nivel de equipo y jugador.</p>
-            <p><strong>HERRAMIENTAS Y REPORTES</strong><br>Herramientas y reportes personalizados, interactivos y automatizados.</p>
-            <p><strong>CONSULTORÍA</strong><br>Consultoría para clubes, empresas y profesionales de la industria del fútbol.</p>`;
-    } else {
-        // Switch to English (Restaurar las versiones en inglés)
-        mainTitle.textContent = 'Felipe Ormazabal'; // Ya está correcto
-        aboutTitle.textContent = 'About Me'; // Restaurar a inglés
-        aboutText.textContent = 'I am a football data analyst with experience in scouting, big data, and creating tools to analyze player performance. I have a strong background in data science and a passion for football. I focus on creating and implementing personalized processes for talent identification and evaluation. My methodology combines traditional scouting based on direct observation and video analysis, with advanced data analysis tools. I have worked with various sources of information, both internal and external, improving player performance assessment and decision-making precision. One of my main interests is data visualization and the use of advanced metrics to perform detailed analyses at both the team and individual player levels. I am always looking for ways to integrate statistical analysis with player evaluation to offer complete solutions in scouting and performance improvement.'; // Restaurar a inglés
+            // Services
+            servicesTitle.textContent = 'Servicios';
+            servicesText.innerHTML = `
+                <p><strong>SCOUTING</strong><br>Coordinación de scouting y evaluación de jugadores (datos).</p>
+                <p><strong>ANÁLISIS DE DATOS Y VIZ</strong><br>Análisis de equipos y oponentes, a nivel de equipo y jugador.</p>
+                <p><strong>HERRAMIENTAS Y REPORTES</strong><br>Herramientas y reportes personalizados, interactivos y automatizados.</p>
+                <p><strong>CONSULTORÍA</strong><br>Consultoría para clubes, empresas y profesionales de la industria del fútbol.</p>`;
 
-        // Restaurar los textos de navegación a inglés
-        navAbout.textContent = 'About Me';
-        navPortfolio.textContent = 'Portfolio';
-        navExperience.textContent = 'Experience';
-        navEducation.textContent = 'Education';
-        navServices.textContent = 'Services';
-        navTools.textContent = 'Tools';
-        navContact.textContent = 'Contact';
+        } else {
+            // Cambiar todo el contenido a inglés
+            mainTitle.textContent = 'Felipe Ormazabal'; 
+            aboutTitle.textContent = 'About Me';
+            aboutText.textContent = 'I am a football data analyst with experience in scouting, big data, and creating tools to analyze player performance. I have worked with different teams and tools to optimize player performance and enhance strategic decision-making. My methodology combines direct observation, video analysis, and advanced data analysis tools. I am constantly seeking new ways to integrate statistical analysis into player evaluation to provide comprehensive solutions in scouting and sports performance.';
 
-        // Restaurar los proyectos en el portafolio a inglés
-        project1.textContent = 'Scouting Tool';
-        project2.textContent = 'Player Comparison Radar';
+            // Navegación
+            navAbout.textContent = 'About Me';
+            navPortfolio.textContent = 'Portfolio';
+            navExperience.textContent = 'Experience';
+            navEducation.textContent = 'Education';
+            navServices.textContent = 'Services';
+            navTools.textContent = 'Tools';
+            navContact.textContent = 'Contact';
 
-        // Restaurar la experiencia a inglés
-        experienceTitle.textContent = 'Experience';
+            // Portafolio
+            project1.textContent = 'Scouting Tool';
+            project2.textContent = 'Player Comparison Radar';
+            project3.textContent = 'Interactive Dashboards';
+            project4.textContent = 'Team Analysis Report';
+            project5.textContent = 'Project 5';
+            project6.textContent = 'Project 6';
 
-        // Restaurar el contacto a inglés
-        contactTitle.textContent = 'Contact';
-        contactText.textContent = 'Email: felipeormazab@gmail.com';
+            // Experiencia
+            experienceTitle.textContent = 'Experience';
 
-        // Restaurar el pie de página a inglés
-        footerText.textContent = '© 2024 Felipe Ormazabal | All Rights Reserved';
+            // Contacto
+            contactTitle.textContent = 'Contact';
+            contactText.innerHTML = `
+                <p>Email: <a href="mailto:felipeormazab@gmail.com">felipeormazab@gmail.com</a></p>
+                <p>Connect with me on <a href="https://www.linkedin.com/in/felipe-ormazabal-835037226/" target="_blank">LinkedIn</a></p>
+            `;
 
-        // Restaurar educación a inglés
-        educationTitle.textContent = 'Education';
-        document.getElementById('education-ua').innerHTML = 'Engineering in Business Administration<br>UA de Chile';
-        document.getElementById('education-lpdt').innerHTML = 'Scouting and Big Data Course<br>LPDT';
-        document.getElementById('education-objetivo').innerHTML = 'Power BI for Football Course<br>Objetivo Analista';
-        document.getElementById('education-ucam').innerHTML = "Master's in Big Data and Scouting<br>UCAM";
-        document.getElementById('education-mbp').innerHTML = 'Specialist in Scouting and Game Analysis<br>MBP School';
+            // Pie de página
+            footerText.textContent = '© 2024 Felipe Ormazabal | All Rights Reserved';
 
-        // Restaurar Tools a inglés
-        toolsTitle.textContent = 'Tools';
-        toolsText.innerHTML = `
-            <p><strong>Wyscout</strong> - A leading platform for football data analysis and scouting.</p>
-            <p><strong>Metrica Play</strong> - An advanced video analysis tool for tactical insights.</p>
-            <p><strong>StatsBomb</strong> - A comprehensive dataset for in-depth football analytics.</p>
-            <p><strong>R Studio</strong> - A powerful tool for statistical analysis and visualization using R.</p>
-            <p><strong>Python</strong> - A versatile programming language for data science and football analytics.</p>
-            <p><strong>Tableau</strong> - A leading platform for creating interactive data visualizations.</p>
-            <p><strong>PowerBI</strong> - A robust tool for creating business intelligence reports and visualizations.</p>`;
+            // Educación
+            educationTitle.textContent = 'Education';
+            document.getElementById('education-ua').innerHTML = 'Engineering in<br> Business Administration';
+            document.getElementById('education-lpdt').innerHTML = 'Scouting and Big Data<br>Course';
+            document.getElementById('education-objetivo').innerHTML = 'Power BI for Football<br>Course';
+            document.getElementById('education-ucam').innerHTML = "Master's in<br>Big Data and Scouting";
+            document.getElementById('education-mbp').innerHTML = 'Specialist in<br>Scouting and Game Analysis';
 
-        // Restaurar Services a inglés
-        servicesTitle.textContent = 'Services';
-        servicesText.innerHTML = `
-            <p><strong>SCOUTING</strong><br>Scouting coordination & player assessment (data).</p>
-            <p><strong>DATA ANALYSIS & VIZ</strong><br>Team & opposition analysis, at a team & player level.</p>
-            <p><strong>TOOLS & REPORTS</strong><br>Personalized, interactive and automated tools & reports.</p>
-            <p><strong>CONSULTANCY</strong><br>To clubs, companies & professionals in the football industry.</p>`;
-    }
-});
+            // Tools
+            toolsTitle.textContent = 'Tools';
+            toolsText.innerHTML = `
+                <p><strong>Wyscout</strong> - A leading platform for football data analysis and scouting.</p>
+                <p><strong>Metrica Play</strong> - An advanced video analysis tool for tactical insights.</p>
+                <p><strong>StatsBomb</strong> - A comprehensive dataset for in-depth football analytics.</p>
+                <p><strong>R Studio</strong> - A powerful tool for statistical analysis and visualization using R.</p>
+                <p><strong>Python</strong> - A versatile programming language for data science and football analytics.</p>
+                <p><strong>Tableau</strong> - A leading platform for creating interactive data visualizations.</p>
+                <p><strong>PowerBI</strong> - A robust tool for creating business intelligence reports and visualizations.</p>`;
 
+            // Services
+            servicesTitle.textContent = 'Services';
+            servicesText.innerHTML = `
+                <p><strong>SCOUTING</strong><br>Scouting coordination & player assessment (data).</p>
+                <p><strong>DATA ANALYSIS & VIZ</strong><br>Team & opposition analysis, at a team & player level.</p>
+                <p><strong>TOOLS & REPORTS</strong><br>Personalized, interactive and automated tools & reports.</p>
+                <p><strong>CONSULTANCY</strong><br>To clubs, companies & professionals in the football industry.</p>`;
+        }
+    });
 </script>
+
+
 
 </body>
 </html>
-
