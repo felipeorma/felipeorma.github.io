@@ -267,7 +267,7 @@
         .portfolio-track {
             display: flex;
             transition: transform 0.5s ease-in-out;
-            width: calc(50% * 6); /* Ancho dinámico según la cantidad de imágenes y ajustado al 50% */
+            width: max-content; /* Ajustar el ancho según el contenido */
         }
 
         .portfolio-item {
@@ -639,6 +639,9 @@
     const project4 = document.getElementById('project-4');
     const project5 = document.getElementById('project-5');
     const project6 = document.getElementById('project-6');
+    const project7 = document.getElementById('project-7');
+    const project8 = document.getElementById('project-8');
+    const project9 = document.getElementById('project-9');
     const experienceTitle = document.getElementById('experience-title');
     const contactTitle = document.getElementById('contact-title');
     const contactText = document.querySelector('.contact-info');
@@ -741,7 +744,7 @@
             project6.textContent = 'League Analysis';
             project7.textContent = 'Team ShotMap';
             project8.textContent = 'Player ShotMap';
-            project9.textContent = 'Team Analysis'
+            project9.textContent = 'Team Analysis';
 
 
             // Experiencia
@@ -796,6 +799,14 @@
 </div>
 
 
+<!-- Modal para mostrar las imágenes en tamaño completo -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Expanded Image">
+    </div>
+</div>
+
 <style>
     /* Estilos del modal */
     .modal {
@@ -812,26 +823,53 @@
     }
 
     .modal-content {
-        max-width: 90%;
-        max-height: 90%;
+        max-width: 85%; /* Ajustado para que la imagen no se expanda tanto */
+        max-height: 85%;
+        position: relative; /* Asegura que los botones de navegación estén posicionados correctamente */
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .modal-content img {
-        width: 85%; /* Ajusta el tamaño a un 85% del ancho de la pantalla */
-        max-width: 600px; /* Asegura que el ancho máximo de la imagen no exceda los 600px */
-        height: auto; /* Mantén la proporción original de la imagen */
-        border-radius: 8px; /* Mantén los bordes redondeados */
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Botones de navegación dentro del modal */
+    .modal-prev, .modal-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        font-size: 2em;
+        color: #333;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+        z-index: 10;
+    }
+
+    .modal-prev {
+        left: 20px; /* Ajusta la distancia desde el lado izquierdo */
+    }
+
+    .modal-next {
+        right: 20px; /* Ajusta la distancia desde el lado derecho */
     }
 
     /* Botón de cerrar el modal */
     .close {
         position: absolute;
-        top: 10px;
-        right: 25px;
+        top: 15px; /* Ajusta la distancia desde la parte superior */
+        right: 15px; /* Ajusta la distancia desde el lado derecho */
         color: #fff;
         font-size: 30px;
         font-weight: bold;
         cursor: pointer;
+        z-index: 10; /* Asegúrate de que el botón esté por encima de la imagen */
     }
 
     .close:hover,
@@ -846,12 +884,48 @@
     const modalImage = document.getElementById('modalImage');
     const closeBtn = document.querySelector('.close');
 
-    // Agregar un event listener para cada imagen del portafolio
-    document.querySelectorAll('.portfolio-item img').forEach(img => {
+    // Agregar botones de navegación
+    const prevBtn = document.createElement('button');
+    prevBtn.classList.add('modal-prev');
+    prevBtn.innerHTML = '&#9664;'; // Flecha hacia la izquierda
+    const nextBtn = document.createElement('button');
+    nextBtn.classList.add('modal-next');
+    nextBtn.innerHTML = '&#9654;'; // Flecha hacia la derecha
+    modal.querySelector('.modal-content').append(prevBtn, nextBtn);
+
+    // Obtener todas las imágenes del portafolio
+    const images = document.querySelectorAll('.portfolio-item img');
+    let currentImageIndex = 0;
+
+    // Función para actualizar la imagen en el modal
+    function showImage(index) {
+        modalImage.src = images[index].src;
+        currentImageIndex = index;
+    }
+
+    // Event listener para abrir el modal al hacer clic en una imagen
+    images.forEach((img, index) => {
         img.addEventListener('click', function() {
             modal.style.display = 'flex';  // Mostrar el modal
-            modalImage.src = this.src;     // Cambiar la imagen del modal a la imagen seleccionada
+            showImage(index); // Mostrar la imagen seleccionada
         });
+    });
+
+    // Event listener para los botones de navegación
+    prevBtn.addEventListener('click', function() {
+        if (currentImageIndex > 0) {
+            showImage(currentImageIndex - 1); // Mostrar imagen anterior
+        } else {
+            showImage(images.length - 1); // Si es la primera imagen, ir a la última
+        }
+    });
+
+    nextBtn.addEventListener('click', function() {
+        if (currentImageIndex < images.length - 1) {
+            showImage(currentImageIndex + 1); // Mostrar imagen siguiente
+        } else {
+            showImage(0); // Si es la última imagen, ir a la primera
+        }
     });
 
     // Cuando se hace clic en el botón de cerrar, se cierra el modal
@@ -867,5 +941,7 @@
     });
 </script>
 
+
 </body>
 </html>
+
