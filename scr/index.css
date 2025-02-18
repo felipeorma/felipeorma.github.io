@@ -1,8 +1,9 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -300,4 +301,4 @@ section::before {
     radial-gradient(circle at 20% 30%, rgba(74, 222, 128, 0.05) 0%, transparent 70%),
     radial-gradient(circle at 80% 70%, rgba(74, 222, 128, 0.05) 0%, transparent 70%);
   pointer-events: none;
-} 
+}
