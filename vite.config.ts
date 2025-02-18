@@ -1,9 +1,6 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Ajustado para GitHub Pages
+  base: '/', // Base vacía porque estás usando dominio personalizado
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
