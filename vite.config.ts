@@ -3,10 +3,15 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // 🔥 ¡IMPORTANTE! Esto corrige las rutas en GitHub Pages
+  base: './', // 🔥 Asegurar que las rutas sean relativas
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    rollupOptions: {
+      input: {
+        main: './index.html' // 🔥 Asegurar que usa el index.html correcto
+      }
+    }
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
