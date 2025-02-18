@@ -1,301 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Felipe Ormazabal - Professional Football Analyst & Scout">
-    <title>Felipe Ormazabal - Football Analytics & Scouting</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #1db954;
-            --background: #0f0f0f;
-            --text: #e0e0e0;
-            --card-bg: rgba(255, 255, 255, 0.05);
-        }
+import React, { useState, useRef } from 'react';
+import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, Switch, Modal, Linking } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { Ionicons } from '@expo/vector-icons';
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+const HomeScreen: React.FC = () => {
+  const [language, setLanguage] = useState<'en' | 'es'>('en');
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [sectionPositions, setSectionPositions] = useState<{ [key: string]: number }>({});
+  const scrollViewRef = useRef<ScrollView>(null);
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--background);
-            color: var(--text);
-            line-height: 1.6;
-        }
+  const translations = {
+    en: {
+      headerTitle: "Felipe Ormazabal",
+      headerSubtitle: "Football Analytics & Scouting",
+      navHome: "Home",
+      navPortfolio: "Portfolio",
+      navAbout: "About",
+      navExperience: "Experience",
+      navBlog: "Blog",
+      navContact: "Contact",
+      aboutTitle: "About Me",
+      aboutText: "I am a football data analyst with experience in scouting, big data, and creating tools to analyze player performance.",
+      experienceTitle: "Experience",
+      blogTitle: "Blog",
+      blogExampleTitle: "Innovative Scouting Methodologies",
+      blogExampleExcerpt: "Discover modern scouting techniques that combine data analytics with traditional evaluations to revolutionize talent discovery.",
+      readMore: "Read more",
+      contactTitle: "Contact",
+      contactContent: "Feel free to reach out for collaborations or inquiries.",
+      email: "Email: felipeormazab@gmail.com",
+      linkedIn: "Connect on LinkedIn",
+    },
+    es: {
+      headerTitle: "Felipe Ormazabal",
+      headerSubtitle: "Análisis y Scouting en Fútbol",
+      navHome: "Inicio",
+      navPortfolio: "Portafolio",
+      navAbout: "Sobre Mí",
+      navExperience: "Experiencia",
+      navBlog: "Blog",
+      navContact: "Contacto",
+      aboutTitle: "Sobre Mí",
+      aboutText: "Soy un analista de datos de fútbol con experiencia en scouting, big data, y creación de herramientas para analizar el rendimiento de jugadores.",
+      experienceTitle: "Experiencia",
+      blogTitle: "Blog",
+      blogExampleTitle: "Metodologías Innovadoras de Scouting",
+      blogExampleExcerpt: "Descubre técnicas modernas de scouting que combinan análisis de datos con evaluaciones tradicionales.",
+      readMore: "Leer más",
+      contactTitle: "Contacto",
+      contactContent: "No dudes en contactar para colaboraciones o consultas.",
+      email: "Correo: felipeormazab@gmail.com",
+      linkedIn: "Conéctate en LinkedIn",
+    }
+  };
 
-        /* Header Styles */
-        header {
-            height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                        url("https://felipeorma.github.io/imagenes/banner.png") no-repeat center center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+  const t = translations[language];
 
-        .header-content h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            animation: fadeIn 1s ease-in;
-        }
+  const handleToggleLanguage = () => {
+    setLanguage(prev => (prev === 'en' ? 'es' : 'en'));
+  };
 
-        .header-content p {
-            font-size: 1.5rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            animation: fadeIn 1s ease-in 0.5s backwards;
-        }
+  const scrollToSection = (section: string) => {
+    if (scrollViewRef.current && sectionPositions[section] !== undefined) {
+      scrollViewRef.current.scrollTo({ y: sectionPositions[section], animated: true });
+    }
+    setMenuOpen(false);
+  };
 
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(15, 15, 15, 0.95);
-            padding: 1rem;
-            z-index: 1000;
-            backdrop-filter: blur(10px);
-        }
+  const onLayoutSection = (section: string, event: any) => {
+    const { y } = event.nativeEvent.layout;
+    setSectionPositions(prev => {
+      if (prev[section] !== y) {
+        return { ...prev, [section]: y };
+      }
+      return prev;
+    });
+  };
 
-        nav a {
-            color: var(--text);
-            text-decoration: none;
-            margin: 0 1rem;
-            transition: color 0.3s ease;
-        }
+  const openEmail = () => {
+    try {
+      Linking.openURL('mailto:felipeormazab@gmail.com');
+    } catch (error) {
+      console.error("Error opening email client", error);
+    }
+  };
 
-        nav a:hover {
-            color: var(--primary);
-        }
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.navBar}>
+        <TouchableOpacity onPress={() => setMenuOpen(true)} style={styles.menuButton}>
+          <Ionicons name="menu" size={28} color="#e0e0e0" />
+        </TouchableOpacity>
+        <Text style={styles.navTitle}>{t.headerTitle}</Text>
+        <View style={styles.languageContainer}>
+          <Text style={{ color: '#e0e0e0', marginRight: 5 }}>{language === 'es' ? 'ES' : 'EN'}</Text>
+          <Switch value={language === 'es'} onValueChange={handleToggleLanguage} />
+        </View>
+      </View>
 
-        /* Portfolio Grid */
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+      <ScrollView ref={scrollViewRef}>
+        <View onLayout={(e) => onLayoutSection('home', e)} style={styles.header}>
+          <Text style={styles.headerTitle}>{t.headerTitle}</Text>
+          <Text style={styles.headerSubtitle}>{t.headerSubtitle}</Text>
+        </View>
 
-        .portfolio-item {
-            position: relative;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
+        <View onLayout={(e) => onLayoutSection('about', e)} style={styles.section}>
+          <Text style={styles.sectionTitle}>{t.aboutTitle}</Text>
+          <Text style={styles.sectionText}>{t.aboutText}</Text>
+        </View>
 
-        .portfolio-item img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
+        <View onLayout={(e) => onLayoutSection('contact', e)} style={styles.section}>
+          <Text style={styles.sectionTitle}>{t.contactTitle}</Text>
+          <TouchableOpacity style={styles.contactButton} onPress={openEmail}>
+            <Text style={styles.contactButtonText}>{t.email}</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+};
 
-        .portfolio-item:hover {
-            transform: translateY(-5px);
-        }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0f0f0f',
+  },
+  navBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 16,
+    paddingVertical: 10,
+    backgroundColor: 'rgba(15,15,15,0.95)',
+  },
+  menuButton: {
+    padding: 8,
+  },
+  navTitle: {
+    color: '#e0e0e0',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+  languageContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  header: {
+    height: 200,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#1e1e1e',
+  },
+  headerTitle: {
+    color: '#e0e0e0',
+    fontSize: 32,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  headerSubtitle: {
+    color: '#1db954',
+    fontSize: 18,
+  },
+  section: {
+    padding: 20,
+    backgroundColor: '#0f0f0f',
+  },
+  sectionTitle: {
+    fontSize: 24,
+    color: '#1db954',
+    textAlign: 'center',
+    marginBottom: 10,
+  },
+  sectionText: {
+    color: '#e0e0e0',
+    textAlign: 'center',
+    fontSize: 16,
+  },
+  contactButton: {
+    backgroundColor: '#1db954',
+    padding: 10,
+    marginTop: 10,
+    borderRadius: 5,
+    alignItems: 'center',
+  },
+  contactButtonText: {
+    color: '#0f0f0f',
+    fontSize: 16,
+  },
+});
 
-        .portfolio-item:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Modal */
-        .modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 1001;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            max-width: 90%;
-            max-height: 90vh;
-        }
-
-        .modal-content img {
-            max-width: 100%;
-            max-height: 90vh;
-            object-fit: contain;
-        }
-
-        .close {
-            position: absolute;
-            top: 15px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            cursor: pointer;
-        }
-
-        /* Sections */
-        section {
-            padding: 5rem 2rem;
-        }
-
-        section h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        /* Language Switcher */
-        .language-switch {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1002;
-            display: flex;
-            align-items: center;
-            background: rgba(45, 45, 45, 0.9);
-            padding: 0.5rem;
-            border-radius: 30px;
-            backdrop-filter: blur(5px);
-        }
-
-        .flag-icon {
-            width: 24px;
-            height: 16px;
-            margin: 0 0.5rem;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            nav {
-                padding: 0.5rem;
-            }
-
-            nav a {
-                margin: 0 0.5rem;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="language-switch">
-        <img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg" alt="English" class="flag-icon">
-        <label class="switch">
-            <input type="checkbox" id="language-toggle">
-            <span class="slider"></span>
-        </label>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="Español" class="flag-icon">
-    </div>
-
-    <header id="home">
-        <div class="header-content">
-            <h1>Felipe Ormazabal</h1>
-            <p>Football Analytics & Scouting</p>
-        </div>
-    </header>
-
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <div class="portfolio-grid">
-            <!-- Your portfolio items -->
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/scouting-tool.png" alt="Scouting Tool">
-            </div>
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/RADAR.jpeg" alt="Player Comparison Radar">
-            </div>
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/dashboard.png" alt="Interactive Dashboards">
-            </div>
-            <!-- Add more portfolio items as needed -->
-        </div>
-    </section>
-
-    <!-- Modal for image preview -->
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <div class="modal-content">
-            <img id="modalImage" src="" alt="Modal Image">
-        </div>
-    </div>
-
-    <script>
-        // Modal functionality
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const closeBtn = document.getElementsByClassName('close')[0];
-        const portfolioItems = document.querySelectorAll('.portfolio-item img');
-
-        portfolioItems.forEach(item => {
-            item.onclick = function() {
-                modal.style.display = 'flex';
-                modalImg.src = this.src;
-            }
-        });
-
-        closeBtn.onclick = function() {
-            modal.style.display = 'none';
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
-        }
-
-        // Language switcher
-        const languageToggle = document.getElementById('language-toggle');
-        languageToggle.addEventListener('change', function() {
-            // Add your language switching logic here
-        });
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.background = 'rgba(15, 15, 15, 0.95)';
-                nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.3)';
-            } else {
-                nav.style.background = 'rgba(15, 15, 15, 0.95)';
-                nav.style.boxShadow = 'none';
-            }
-        });
-    </script>
-</body>
-</html>
+export default HomeScreen;
