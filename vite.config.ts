@@ -3,11 +3,10 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // 🔥 Esto genera rutas relativas en lugar de absolutas
+  base: './', // 🔥 ¡IMPORTANTE! Esto corrige las rutas en GitHub Pages
   build: {
     outDir: 'dist',
-    assetsDir: 'assets', // Asegura que los assets se guarden en /assets/
-    manifest: true, // Opcional, pero ayuda a depurar rutas
+    assetsDir: 'assets',
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
