@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // 🔥 Asegurar que las rutas sean relativas
+  base: './', // 🔥 Asegura que las rutas sean relativas
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
