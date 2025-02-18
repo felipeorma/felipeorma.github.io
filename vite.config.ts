@@ -3,12 +3,12 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: '', // 👈 Asegura rutas relativas
+  base: './', // 🔥 Asegura rutas relativas en GitHub Pages
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
-      input: 'index.html', // 👈 IMPORTANTE: Asegura que use `index.html` correcto
+      input: './index.html', // 🔥 Se asegura de usar `index.html`
     }
   }
 });
