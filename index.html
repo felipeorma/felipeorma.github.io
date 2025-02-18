@@ -4,7 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Felipe Ormazabal - Portfolio</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="imagenes/favicon.png" type="image/png">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
     <style>
         * {
             margin: 0;
@@ -15,210 +24,63 @@
             font-family: 'Oswald', sans-serif;
             background-color: #0f0f0f;
             color: #e0e0e0;
-            overflow-x: hidden;
             scroll-behavior: smooth;
         }
         header {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://felipeorma.github.io/imagenes/banner.png") no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("imagenes/banner.png") no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #fff;
+            text-align: center;
+            color: white;
             position: relative;
         }
-        .tools {
-            background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .tools p {
-            font-size: 1.2em;
-            color: #e0e0e0;
-            margin: 10px 0;
-            line-height: 1.6;
-        }
-        .tools p strong {
-            color: #1db954;
-            font-weight: bold;
-        }
-        .language-switch {
+        .menu-toggle {
             position: fixed;
             top: 20px;
-            right: 20px;
-            display: flex;
-            align-items: center;
-            background-color: #1e1e1e;
-            padding: 10px 15px;
-            border-radius: 30px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            z-index: 999;
-        }
-        .flag-icon {
-            width: 30px;
-            height: 20px;
-            margin: 0 10px;
-        }
-        .switch {
-            position: relative;
-            display: inline-block;
-            width: 60px;
-            height: 34px;
-        }
-        .switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        .slider {
-            position: absolute;
+            left: 20px;
+            background: #1db954;
+            padding: 10px;
+            border-radius: 5px;
             cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
+            z-index: 1001;
         }
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-        #contact-title {
-            font-size: 2.5em;
-            color: #1db954;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .portfolio-item img {
-            width: 50%;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 15px;
-        }
-        .contact-info {
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            max-width: 600px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        .contact-info p {
-            font-size: 1.3em;
-            color: #e0e0e0;
-            margin: 10px 0;
-        }
-        .contact-info a {
-            color: #1db954;
-            font-weight: bold;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .contact-info a:hover {
-            color: #e0e0e0;
-        }
-        input:checked + .slider {
-            background-color: #1db954;
-        }
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
-        header h1 {
-            font-size: 5em;
-            letter-spacing: 5px;
-            animation: fadeInDown 1.5s ease-in-out;
-            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        .menu-toggle i {
+            font-size: 24px;
+            color: white;
         }
         nav {
-            margin-top: 20px;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 250px;
+            height: 100vh;
+            background: #1e1e1e;
+            padding-top: 60px;
+            transition: left 0.3s;
+            z-index: 1000;
         }
         nav a {
-            margin: 0 15px;
-            font-size: 1.2em;
-            color: #fff;
+            display: block;
+            padding: 15px;
             text-decoration: none;
-            position: relative;
-            transition: color 0.3s ease;
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
         nav a:hover {
-            color: #1db954;
-        }
-        nav a::after {
-            content: "";
-            display: block;
-            width: 0;
-            height: 2px;
             background: #1db954;
-            transition: width .3s;
-            margin: 5px auto 0;
         }
-        nav a:hover::after {
-            width: 100%;
-        }
-        section {
-            padding: 50px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        section h2 {
-            font-size: 2.5em;
-            color: #1db954;
-            margin-bottom: 40px;
-            border-bottom: 2px solid #1db954;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-        .about-me {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-        .about-me p {
-            font-size: 1.5em;
-            line-height: 1.8;
-            text-align: justify;
-        }
-        .about-me img {
-            width: 100%;
-            border-radius: 15px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-        }
-        .experience, .education {
-            display: flex;
-            justify-content: space-between;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-        .experience-item, .education-item {
-            text-align: center;
-            min-width: 200px;
-            margin: 20px;
-        }
-        .experience-item img, .education-item img {
-            max-width: 100px;
-            height: 100px;
-            object-fit: contain;
-            margin-bottom: 10px;
+        .nav-active {
+            left: 0;
         }
         .portfolio {
-            position: relative;
+            display: flex;
             overflow: hidden;
+            max-width: 100%;
+            margin: auto;
+            position: relative;
         }
         .portfolio-track {
             display: flex;
@@ -226,20 +88,23 @@
         }
         .portfolio-item {
             min-width: 300px;
-            margin: 0 10px;
+            margin: 10px;
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
         }
         .portfolio-controls {
             position: absolute;
             top: 50%;
-            left: 0;
-            right: 0;
+            left: 10px;
+            right: 10px;
             display: flex;
             justify-content: space-between;
-            transform: translateY(-50%);
-            z-index: 10;
         }
         .control-btn {
-            background-color: #1db954;
+            background: #1db954;
             border: none;
             color: white;
             font-size: 24px;
@@ -248,246 +113,121 @@
             border-radius: 50%;
         }
         .control-btn:hover {
-            background-color: #17a44a;
+            background: #17a44a;
+        }
+        .blog-section {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+        .blog-posts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .blog-post {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .blog-post h3 {
+            color: #1db954;
+        }
+        .blog-post p {
+            color: #e0e0e0;
         }
         footer {
             text-align: center;
-            padding: 50px;
-            background-color: #1e1e1e;
-            color: #fff;
-            margin-top: 100px;
-        }
-        footer p {
-            font-size: 1.1em;
-        }
-        @media (max-width: 768px) {
-            .experience, .education {
-                flex-direction: column;
-            }
-            header h1 {
-                font-size: 3em;
-            }
-            .about-me {
-                grid-template-columns: 1fr;
-            }
-            section {
-                padding: 30px 20px;
-            }
-            nav a {
-                font-size: 1em;
-            }
-            .portfolio-item {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-            .tools p, .services p {
-                font-size: 1.1em;
-            }
-            .tools, .services {
-                padding: 15px;
-            }
-        }
-        @media (max-width: 768px) {
-            .portfolio-item {
-                width: 50%;
-                margin-bottom: 20px;
-            }
-        }
-        @media (max-width: 768px) {
-            .experience-item img, .education-item img {
-                max-width: 80px;
-                height: auto;
-            }
-        }
-        @media (max-width: 768px) {
-            nav a {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
-        .modal-content {
-            max-width: 90%;
-            max-height: 90%;
-        }
-        .modal-content img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            color: #fff;
-            font-size: 30px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .close:hover,
-        .close:focus {
-            color: #bbb;
-        }
-        .services p {
-            font-size: 1.2em;
-            margin: 10px 0;
-            line-height: 1.6;
-            text-align: center;
-        }
-        .services p strong {
-            color: #1db954;
-        }
-        .services {
-            background-color: #1e1e1e;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
+            padding: 30px;
+            background: #1e1e1e;
+            color: white;
         }
     </style>
 </head>
 <body>
-<header>
-    <div class="language-switch">
-        <img src="https://upload.wikimedia.org/wikipedia/en/c/cf/Flag_of_Canada.svg" alt="Canada Flag" class="flag-icon">
-        <label class="switch">
-            <input type="checkbox" id="language-toggle">
-            <span class="slider"></span>
-        </label>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Flag_of_Chile.svg" alt="Chile Flag" class="flag-icon">
+
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
     </div>
-    <h1 id="main-title">Felipe Ormazabal</h1>
+
     <nav>
-        <a href="#about" id="nav-about">About Me</a>
-        <a href="#portfolio" id="nav-portfolio">Portfolio</a>
-        <a href="#experience" id="nav-experience">Experience</a>
-        <a href="#education" id="nav-education">Education</a>
-        <a href="#services" id="nav-services">Services</a>
-        <a href="#tools" id="nav-tools">Tools</a>
-        <a href="#contact" id="nav-contact">Contact</a>
+        <a href="#about">About Me</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
     </nav>
-</header>
-<section id="about">
-    <h2 id="about-title">About Me</h2>
-    <div class="about-me">
-        <p id="about-text">I am a football data analyst with experience in scouting, big data, and creating tools to analyze player performance. I have a strong background in data science and a passion for football. My work involves using data to uncover insights and improve team performance.</p>
-        <img src="https://felipeorma.github.io/imagenes/perfil.jpeg" alt="Felipe Ormazabal">
-    </div>
-</section>
-<section id="portfolio">
-    <h2 id="portfolio-title">Portfolio</h2>
-    <div class="portfolio">
-        <div class="portfolio-track" id="portfolioTrack">
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/scouting-tool.png" alt="Scouting Tool">
-                <p id="project-1">Scouting Tool</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/RADAR.jpeg" alt="Player Comparison Radar">
-                <p id="project-2">Player Comparison Radar</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/dashboard.png" alt="Interactive Dashboards">
-                <p id="project-3">Interactive Dashboards</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/post-match-report.jpeg" alt="PostMatch Analysis Report">
-                <p id="project-4">Team Analysis Report</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/dt-analysis.png" alt="DT Analysis">
-                <p id="project-5">DT Analysis</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/league stats.jpeg" alt="League Analysis">
-                <p id="project-6">League Analysis</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/SHOTMAP.jpeg" alt="Team ShotMap">
-                <p id="project-7">Team ShotMap</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/SHOTS.jpeg" alt="Team ShotMap">
-                <p id="project-8">Player ShotMap</p>
-            </div>
-            <div class="portfolio-item">
-                <img src="https://felipeorma.github.io/imagenes/team-analysis.png" alt="Team Analysis">
-                <p id="project-9">Team Analysis</p>
-            </div>
-        </div>
-        <div class="portfolio-controls">
+
+    <header>
+        <h1>Felipe Ormazabal</h1>
+        <p>Football Analytics & Scouting</p>
+    </header>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio">
             <button id="prev-btn" class="control-btn">&#9664;</button>
+            <div class="portfolio-track">
+                <div class="portfolio-item">
+                    <img src="imagenes/scouting-tool.png" alt="Scouting Tool">
+                </div>
+                <div class="portfolio-item">
+                    <img src="imagenes/RADAR.jpeg" alt="Player Comparison Radar">
+                </div>
+                <div class="portfolio-item">
+                    <img src="imagenes/dashboard.png" alt="Interactive Dashboards">
+                </div>
+            </div>
             <button id="next-btn" class="control-btn">&#9654;</button>
         </div>
-    </div>
-</section>
-<section id="experience">
-    <h2 id="experience-title">Experience</h2>
-    <div class="experience">
-        <div class="experience-item">
-            <img src="https://felipeorma.github.io/imagenes/Albacete_balompie.png" alt="Albacete">
-            <p>Albacete Balompie</p>
+    </section>
+
+    <section id="blog" class="blog-section">
+        <h2>Blog</h2>
+        <div class="blog-posts" id="blog-posts">
+            <!-- Posts de WordPress se cargarán aquí -->
         </div>
-        <div class="experience-item">
-            <img src="https://felipeorma.github.io/imagenes/MLS.png" alt="MLS">
-            <p>MLS</p>
-        </div>
-        <div class="experience-item">
-            <img src="https://felipeorma.github.io/imagenes/Deportivo_Cuenca.png" alt="Deportivo Cuenca">
-            <p>Deportivo Cuenca</p>
-        </div>
-        <div class="experience-item">
-            <img src="https://felipeorma.github.io/imagenes/chile.png" alt="Chilean First Division">
-            <p>Chilean First Division</p>
-        </div>
-        <div class="experience-item">
-            <img src="https://felipeorma.github.io/imagenes/CanPL.png" alt="Canadian Premier League">
-            <p>Canadian Premier League</p>
-        </div>
-    </div>
-</section>
-<section id="education">
-    <h2 id="education-title">Education</h2>
-    <div class="education">
-        <div class="education-item">
-            <img src="https://felipeorma.github.io/imagenes/UA%20CHILE.png" alt="UA de Chile Logo">
-            <p id="education-ua">Engineering<br>in Business Administration</p>
-        </div>
-        <div class="education-item">
-            <img src="https://felipeorma.github.io/imagenes/LPDT.png" alt="LPDT Logo">
-            <p id="education-lpdt">Course<br>in Scouting and Big Data</p>
-        </div>
-        <div class="education-item">
-            <img src="https://felipeorma.github.io/imagenes/objetivo_analista.png" alt="Objetivo Analista Logo">
-            <p id="education-objetivo">Course<br>Power BI for Football</p>
-        </div>
-        <div class="education-item">
-            <img src="https://felipeorma.github.io/imagenes/UCAM_Murcia.jpg" alt="UCAM Logo">
-            <p id="education-ucam">Master's<br>in Big Data and Scouting</p>
-        </div>
-        <div class="education-item">
-            <img src="https://felipeorma.github.io/imagenes/MBP.jpg" alt="MBP School Logo">
-            <p id="education-mbp">Specialist in<br>Scouting and Game Analysis</p>
-        </div>
-    </div>
-</section>
-<section id="services">
-    <h2 id="services-title">Services</h2>
-    <div class="services">
-        <p><strong>SCOUTING</strong><br>Scouting coordination & player assessment (data).</p>
-        <p><strong>DATA ANALYSIS & VIZ</strong><br>Team & opposition analysis, at a team & player level.</p>
-        <p><strong>TOOLS & REPORTS</strong><br>Personalized, interactive and automated tools & reports.</p>
-        <p><strong>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Felipe Ormazabal | All Rights Reserved</p>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('nav-active');
+        });
+
+        const portfolioTrack = document.querySelector('.portfolio-track');
+        let offset = 0;
+
+        document.getElementById('next-btn').addEventListener('click', function() {
+            if (offset > -600) {
+                offset -= 300;
+                portfolioTrack.style.transform = `translateX(${offset}px)`;
+            }
+        });
+
+        document.getElementById('prev-btn').addEventListener('click', function() {
+            if (offset < 0) {
+                offset += 300;
+                portfolioTrack.style.transform = `translateX(${offset}px)`;
+            }
+        });
+
+        async function loadBlogPosts() {
+            const response = await fetch('https://public-api.wordpress.com/wp/v2/sites/en.blog.wordpress.com/posts');
+            const posts = await response.json();
+            const blogContainer = document.getElementById('blog-posts');
+            blogContainer.innerHTML = posts.slice(0, 3).map(post => `
+                <div class="blog-post">
+                    <h3>${post.title.rendered}</h3>
+                    <p>${post.excerpt.rendered}</p>
+                </div>
+            `).join('');
+        }
+        loadBlogPosts();
+    </script>
+
+</body>
+</html>
