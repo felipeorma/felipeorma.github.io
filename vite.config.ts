@@ -3,17 +3,12 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig({
   plugins: [react()],
-  base: './', // 🔥 Asegura que las rutas sean relativas
+  base: './', // 👈 IMPORTANTE: Asegura rutas relativas
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
-      input: {
-        main: './index.html' // 🔥 Asegurar que usa el index.html correcto
-      }
+      input: './index.html', // 👈 IMPORTANTE: Usar el index.html correcto
     }
-  },
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
+  }
 });
