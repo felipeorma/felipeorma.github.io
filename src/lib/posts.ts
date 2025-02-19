@@ -5,7 +5,7 @@ const posts = [
     date: '2025-02-18',
     excerpt: 'Analysis of heatmaps generated during the first phase of the CONMEBOL U20 2025 tournament',
     coverImage: 'https://cdn.conmebol.com/wp-content/uploads/2024/10/sub202025.png',
-    content: `# HeatMaps by Players, Teams, and Matchdays - **Group A** - First Phase CONMEBOL U20 2025
+    content: `# HeatMaps by Players, Teams, and Matchdays - Group A - First Phase CONMEBOL U20 2025
 
 Modern football is increasingly influenced by data analysis and advanced visualizations, such as heatmaps. During the first phase of the CONMEBOL U20 2025 tournament, heatmaps have been a key tool for understanding how teams and players performed.
 
