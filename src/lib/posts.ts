@@ -94,54 +94,6 @@ In the modern era, data has become an essential tool in decision-making across v
 
 One of the most well-known cases of data-driven success in football is Toulouse FC in France. After being acquired by data-focused investment firm RedBird Capital, the club implemented an analytical approach that contributed to their promotion back to Ligue 1. By utilizing performance metrics and scouting algorithms, they identified undervalued players who fit their tactical philosophy, proving that data can be a game-changer in squad building.
 
-Additionally, the rise of football managers with analytical backgrounds—many of whom started as passionate players of Football Manager—has shown the real-world impact of data literacy. Notable figures like Sam Gregory (Inter Miami), Victor Orta (formerly of Leeds United), and Matthew Benham (owner of Brentford FC) demonstrate how an analytical mindset can shape club strategies.
-
-## Advanced Metrics and Their Applications
-
-Football has embraced a range of advanced statistics that go beyond traditional metrics like goals and assists. Some key metrics include:
-
-- **Expected Goals (xG)**: Measures the quality of a shot based on historical data, helping assess a player's finishing ability.
-- **Expected Assists (xA)**: Evaluates the likelihood of a pass leading to a goal, reflecting playmaking skills.
-- **Pressing Efficiency**: Quantifies how effectively a team or player pressures opponents.
-- **Packing Rate**: Analyzes how many opposing players are bypassed with a pass or dribble, giving insights into a team's progression strategy.
-- **Distance Covered & Sprint Data**: Used in physical conditioning and fitness management.
-
-## Conclusion
-
-Data-driven decision-making is no longer a luxury but a necessity in modern sports. Whether it's optimizing performance, preventing injuries, scouting talent, or engaging fans, analytics is reshaping football and other sports at every level. As technology advances, the role of data in sports will only continue to grow, making it an exciting time for both analysts and fans who want to see their favorite teams succeed through science and strategy.
-
-By Felipe Ormazabal.`
-  }
-];
-
-export interface Post {
-  slug: string;
-  title: string;
-  date: string;
-  excerpt: string;
-  coverImage: string;
-  content: string;
-}
-
-export function getAllPosts(): Post[] {
-  return posts.sort((a, b) => (a.date > b.date ? -1 : 1));
-},
-  {
-    slug: 'data-driven-sports',
-    title: 'The Rise of Data-Driven Decision Making in Sports',
-    date: '2024-03-21',
-    excerpt: 'How data analytics is revolutionizing sports management and performance analysis',
-    coverImage: 'https://media.licdn.com/dms/image/v2/C4E12AQGQHD4BHivb1w/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1641818034525?e=2147483647&v=beta&t=jV_m6S4FGukp4uK-vT2yCcXyOct6lcDOOyk-cHziHTw',
-    content: `# The Rise of Data-Driven Decision Making in Sports
-
-In the modern era, data has become an essential tool in decision-making across various industries, and sports are no exception. From recruitment to performance analysis, injury prevention, and fan engagement, data-driven strategies are transforming how teams operate. Football, a traditionally intuition-based sport, is now deeply influenced by analytics, with clubs increasingly investing in advanced metrics to gain a competitive edge.
-
-## The Influence of Data in Football
-
-One of the most well-known cases of data-driven success in football is Toulouse FC in France. After being acquired by data-focused investment firm RedBird Capital, the club implemented an analytical approach that contributed to their promotion back to Ligue 1. By utilizing performance metrics and scouting algorithms, they identified undervalued players who fit their tactical philosophy, proving that data can be a game-changer in squad building.
-
-Additionally, the rise of football managers with analytical backgrounds—many of whom started as passionate players of Football Manager—has shown the real-world impact of data literacy. Notable figures like Sam Gregory (Inter Miami), Victor Orta (formerly of Leeds United), and Matthew Benham (owner of Brentford FC) demonstrate how an analytical mindset can shape club strategies.
-
 ## Advanced Metrics and Their Applications
 
 Football has embraced a range of advanced statistics that go beyond traditional metrics like goals and assists. Some key metrics include:
