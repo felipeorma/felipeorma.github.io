@@ -1,5 +1,43 @@
-// Datos estáticos para los posts
 const posts = [
+  {
+    slug: 'heatmaps-sudamericano-2025',
+    title: 'HeatMaps individuales, por selecciones y por fecha - Primera fase Sudamericano Conmebol 2025',
+    date: '2025-02-18',
+    excerpt: 'Análisis de los mapas de calor generados en la primera fase del Sudamericano Sub-20 2025',
+    coverImage: 'https://diariodeportes.com.co/wp-content/uploads/2024/11/El-Sudamericano-Sub-%E2%80%93-20-del-2025-sera-en-Venezuela.jpg',
+    content: `# HeatMaps individuales, por selecciones y por fecha - Primera fase Sudamericano Conmebol 2025
+
+El fútbol moderno está cada vez más influenciado por el análisis de datos y las visualizaciones avanzadas, como los mapas de calor. Durante la primera fase del Sudamericano Sub-20 2025, los heatmaps han sido una herramienta clave para entender cómo se desempeñaron los equipos y los jugadores.
+
+## ¿Qué revelan los HeatMaps?
+
+### 1. **Patrones de juego individuales**
+Los mapas de calor individuales permiten analizar el comportamiento de cada jugador en el campo. Desde los laterales que constantemente pisan la línea de fondo hasta los mediocampistas con mayor influencia en la circulación del balón. Por ejemplo, los extremos de Brasil han mostrado una alta presencia en las bandas, mientras que el mediocampo de Argentina ha tenido mayor control en zonas interiores.
+
+### 2. **Comparación entre selecciones**
+Cada selección ha presentado patrones de juego distintos
+
+### 3. **Evolución partido a partido**
+Los HeatMaps también permiten identificar cómo han cambiado las estrategias en cada fecha. En la primera jornada, muchas selecciones apostaron por la presión alta, mientras que en la tercera fecha, algunos equipos ajustaron su posicionamiento para cerrar espacios y asegurar su clasificación.
+
+## Tabla final de la fase de grupos
+
+### **Grupo A**
+1. **Uruguay (9 pts, DG +8)**  
+2. **Paraguay (9 pts, DG -3)**  
+3. **Chile (6 pts, DG 0)**  
+4. **Venezuela (6 pts, DG +3)**  
+5. **Perú (0 pts, DG -8)**  
+
+### **Grupo B**
+1. **Colombia (10 pts, DG +3)**  
+2. **Argentina (8 pts, DG +7)**  
+3. **Brasil (6 pts, DG -5)**  
+4. **Ecuador (4 pts, DG -1)**  
+5. **Bolivia (0 pts, DG -4)**  
+
+Por Felipe Ormazabal.`
+  },
   {
     slug: 'data-driven-sports',
     title: 'The Rise of Data-Driven Decision Making in Sports',
@@ -46,11 +84,10 @@ Data isn't just used on the field. Teams analyze fan behavior through social med
 
 ## Conclusion
 
-
 Data-driven decision-making is no longer a luxury but a necessity in modern sports. Whether it's optimizing performance, preventing injuries, scouting talent, or engaging fans, analytics is reshaping football and other sports at every level. As technology advances, the role of data in sports will only continue to grow, making it an exciting time for both analysts and fans who want to see their favorite teams succeed through science and strategy.
 
-By Felipe Ormazabal.`},
- 
+By Felipe Ormazabal.`
+  }
 ];
 
 export interface Post {
