@@ -5,20 +5,9 @@ const posts = [
     date: '2025-02-18',
     excerpt: 'Analysis of heatmaps generated during the first phase of the CONMEBOL U20 2025 tournament',
     coverImage: 'https://cdn.conmebol.com/wp-content/uploads/2024/10/sub202025.png',
-    content: `# HeatMaps by Players, Teams, and Matchdays - Group A - First Phase CONMEBOL U20 2025
+    content: `# HeatMaps by Players, Teams, and Matchdays - Group Stage - First Phase CONMEBOL U20 2025
 
 Modern football is increasingly influenced by data analysis and advanced visualizations, such as heatmaps. During the first phase of the CONMEBOL U20 2025 tournament, heatmaps have been a key tool for understanding how teams and players performed.
-
-## What Do HeatMaps Reveal?
-
-### 1. **Individual Playing Patterns**
-Individual heatmaps help analyze each player's movement on the field. From full-backs constantly reaching the final third to midfielders controlling ball circulation. For example, Brazil's wingers have shown strong presence on the flanks, while Argentina's midfield has dominated in central areas.
-
-### 2. **Team Comparisons**
-Each team has exhibited different playing styles.
-
-### 3. **Match-by-Match Evolution**
-Heatmaps also help identify how strategies changed over the course of the matches. On the first matchday, many teams opted for high pressing, while by the third matchday, some adjusted their positioning to close spaces and secure qualification.
 
 ## Final Standings of the Group Stage
 
@@ -29,16 +18,64 @@ Heatmaps also help identify how strategies changed over the course of the matche
 4. **🇻🇪 Venezuela (6 pts, GD +3)**  
 5. **🇵🇪 Peru (0 pts, GD -8)**  
 
+### **Group B**
+1. **🇧🇷 Brazil (10 pts, GD +6)**  
+2. **🇦🇷 Argentina (7 pts, GD +2)**  
+3. **🇪🇨 Ecuador (7 pts, GD 0)**  
+4. **🇨🇴 Colombia (4 pts, GD -2)**  
+5. **🇧🇴 Bolivia (1 pts, GD -6)**  
 
 ## Match Heatmap Images
 
-📅 **31/01/2025 16:30**  
-🇵🇾 **Paraguay U20** 2 - 1 🇨🇱 **Chile U20**  
-[View heatmap](https://felipeorma.github.io/imagenes_blog/heatmap_paraguay_chile_31_01_2025.jpg)
+### **Group A**
+📅 **23/01/2025**  
+🇵🇪 **Peru U20** 1 - 2 🇵🇾 **Paraguay U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/peru_paraguay_A)
 
-📅 **31/01/2025 16:30**  
-🇻🇪 **Venezuela U20** 1 - 0 🇺🇾 **Uruguay U20**  
-[View heatmap](https://felipeorma.github.io/imagenes_blog/heatmap_venezuela_uruguay_31_01_2025.jpg)
+🇻🇪 **Venezuela U20** 1 - 2 🇨🇱 **Chile U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/venezuela_chile_A)
+
+📅 **24/01/2025**  
+🇧🇴 **Bolivia U20** 1 - 2 🇪🇨 **Ecuador U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/bolivia_ecuador_B)
+
+🇧🇷 **Brazil U20** 0 - 6 🇦🇷 **Argentina U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/brazil_argentina_B)
+
+📅 **25/01/2025**  
+🇨🇱 **Chile U20** 1 - 2 🇺🇾 **Uruguay U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/chile_uruguay_A)
+
+🇵🇪 **Peru U20** 0 - 4 🇻🇪 **Venezuela U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/peru_venezuela_A)
+
+📅 **26/01/2025**  
+🇧🇴 **Bolivia U20** 1 - 2 🇧🇷 **Brazil U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/bolivia_brazil_B)
+
+🇦🇷 **Argentina U20** 1 - 1 🇨🇴 **Colombia U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/argentina_colombia_B)
+
+📅 **28/01/2025**  
+🇦🇷 **Argentina U20** 1 - 0 🇧🇴 **Bolivia U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/argentina_bolivia_B)
+
+🇨🇴 **Colombia U20** 1 - 0 🇪🇨 **Ecuador U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/colombia_ecuador_B)
+
+📅 **30/01/2025**  
+🇨🇴 **Colombia U20** 3 - 2 🇧🇴 **Bolivia U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/colombia_bolivia_B)
+
+🇪🇨 **Ecuador U20** 2 - 3 🇧🇷 **Brazil U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/ecuador_brazil_B)
+
+📅 **01/02/2025**  
+🇧🇷 **Brazil U20** 0 - 1 🇨🇴 **Colombia U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/brazil_colombia_B)
+
+🇪🇨 **Ecuador U20** 0 - 0 🇦🇷 **Argentina U20**  
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/ecuador_argentina_B)
 
 By Felipe Ormazabal
 .`
@@ -56,8 +93,6 @@ In the modern era, data has become an essential tool in decision-making across v
 ## The Influence of Data in Football
 
 One of the most well-known cases of data-driven success in football is Toulouse FC in France. After being acquired by data-focused investment firm RedBird Capital, the club implemented an analytical approach that contributed to their promotion back to Ligue 1. By utilizing performance metrics and scouting algorithms, they identified undervalued players who fit their tactical philosophy, proving that data can be a game-changer in squad building.
-
-Additionally, the rise of football managers with analytical backgrounds—many of whom started as passionate players of Football Manager—has shown the real-world impact of data literacy. Notable figures like Sam Gregory (Inter Miami), Victor Orta (formerly of Leeds United), and Matthew Benham (owner of Brentford FC) demonstrate how an analytical mindset can shape club strategies.
 
 ## Advanced Metrics and Their Applications
 
