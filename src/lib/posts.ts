@@ -33,7 +33,7 @@ Modern football is increasingly influenced by data analysis and advanced visuali
 ### **Group A**
 📅 **23/01/2025**  
 🇵🇪 **Peru U20** 1 - 2 🇵🇾 **Paraguay U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/peru_paraguay_A)
+[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/peru_paraguay_A.png)
 
 🇻🇪 **Venezuela U20** 1 - 2 🇨🇱 **Chile U20**  
 [🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/venezuela_chile_A)
