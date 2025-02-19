@@ -30,55 +30,75 @@ Modern football is increasingly influenced by data analysis and advanced visuali
 ### **Group A**
 📅 **23/01/2025**  
 🇵🇪 **Peru U20** 1 - 2 🇵🇾 **Paraguay U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/peru_paraguay_A)
+[![Heatmap Peru vs Paraguay](https://felipeorma.github.io/imagenes_blog/heatmap_peru_paraguay_23_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_peru_paraguay_23_01_2025.jpg)
 
 🇻🇪 **Venezuela U20** 1 - 2 🇨🇱 **Chile U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/venezuela_chile_A)
+[![Heatmap Venezuela vs Chile](https://felipeorma.github.io/imagenes_blog/heatmap_venezuela_chile_23_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_venezuela_chile_23_01_2025.jpg)
 
 📅 **24/01/2025**  
 🇧🇴 **Bolivia U20** 1 - 2 🇪🇨 **Ecuador U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/bolivia_ecuador_B)
+[![Heatmap Bolivia vs Ecuador](https://felipeorma.github.io/imagenes_blog/heatmap_bolivia_ecuador_24_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_bolivia_ecuador_24_01_2025.jpg)
 
 🇧🇷 **Brazil U20** 0 - 6 🇦🇷 **Argentina U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/brazil_argentina_B)
+[![Heatmap Brazil vs Argentina](https://felipeorma.github.io/imagenes_blog/heatmap_brazil_argentina_24_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_brazil_argentina_24_01_2025.jpg)
 
 📅 **25/01/2025**  
 🇨🇱 **Chile U20** 1 - 2 🇺🇾 **Uruguay U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/chile_uruguay_A)
+[![Heatmap Chile vs Uruguay](https://felipeorma.github.io/imagenes_blog/heatmap_chile_uruguay_25_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_chile_uruguay_25_01_2025.jpg)
 
 🇵🇪 **Peru U20** 0 - 4 🇻🇪 **Venezuela U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/peru_venezuela_A)
+[![Heatmap Peru vs Venezuela](https://felipeorma.github.io/imagenes_blog/heatmap_peru_venezuela_25_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_peru_venezuela_25_01_2025.jpg)
 
 📅 **26/01/2025**  
 🇧🇴 **Bolivia U20** 1 - 2 🇧🇷 **Brazil U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/bolivia_brazil_B)
+[![Heatmap Bolivia vs Brazil](https://felipeorma.github.io/imagenes_blog/heatmap_bolivia_brazil_26_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_bolivia_brazil_26_01_2025.jpg)
 
 🇦🇷 **Argentina U20** 1 - 1 🇨🇴 **Colombia U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/argentina_colombia_B)
+[![Heatmap Argentina vs Colombia](https://felipeorma.github.io/imagenes_blog/heatmap_argentina_colombia_26_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_argentina_colombia_26_01_2025.jpg)
 
 📅 **28/01/2025**  
 🇦🇷 **Argentina U20** 1 - 0 🇧🇴 **Bolivia U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/argentina_bolivia_B)
+[![Heatmap Argentina vs Bolivia](https://felipeorma.github.io/imagenes_blog/heatmap_argentina_bolivia_28_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_argentina_bolivia_28_01_2025.jpg)
 
 🇨🇴 **Colombia U20** 1 - 0 🇪🇨 **Ecuador U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/colombia_ecuador_B)
+[![Heatmap Colombia vs Ecuador](https://felipeorma.github.io/imagenes_blog/heatmap_colombia_ecuador_28_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_colombia_ecuador_28_01_2025.jpg)
 
 📅 **30/01/2025**  
 🇨🇴 **Colombia U20** 3 - 2 🇧🇴 **Bolivia U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/colombia_bolivia_B)
+[![Heatmap Colombia vs Bolivia](https://felipeorma.github.io/imagenes_blog/heatmap_colombia_bolivia_30_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_colombia_bolivia_30_01_2025.jpg)
 
 🇪🇨 **Ecuador U20** 2 - 3 🇧🇷 **Brazil U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/ecuador_brazil_B)
+[![Heatmap Ecuador vs Brazil](https://felipeorma.github.io/imagenes_blog/heatmap_ecuador_brazil_30_01_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_ecuador_brazil_30_01_2025.jpg)
 
 📅 **01/02/2025**  
 🇧🇷 **Brazil U20** 0 - 1 🇨🇴 **Colombia U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/brazil_colombia_B)
+[![Heatmap Brazil vs Colombia](https://felipeorma.github.io/imagenes_blog/heatmap_brazil_colombia_01_02_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_brazil_colombia_01_02_2025.jpg)
 
 🇪🇨 **Ecuador U20** 0 - 0 🇦🇷 **Argentina U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/ecuador_argentina_B)
+[![Heatmap Ecuador vs Argentina](https://felipeorma.github.io/imagenes_blog/heatmap_ecuador_argentina_01_02_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_ecuador_argentina_01_02_2025.jpg)
 
-By Felipe Ormazabal
-.`
+📅 **02/02/2025**  
+🇨🇱 **Chile U20** 2 - 2 🇻🇪 **Venezuela U20**  
+[![Heatmap Chile vs Venezuela](https://felipeorma.github.io/imagenes_blog/heatmap_chile_venezuela_02_02_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_chile_venezuela_02_02_2025.jpg)
+
+🇺🇾 **Uruguay U20** 3 - 1 🇵🇾 **Paraguay U20**  
+[![Heatmap Uruguay vs Paraguay](https://felipeorma.github.io/imagenes_blog/heatmap_uruguay_paraguay_02_02_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_uruguay_paraguay_02_02_2025.jpg)
+
+📅 **04/02/2025**  
+🇵🇾 **Paraguay U20** 1 - 0 🇵🇪 **Perú U20**  
+[![Heatmap Paraguay vs Peru](https://felipeorma.github.io/imagenes_blog/heatmap_paraguay_peru_04_02_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_paraguay_peru_04_02_2025.jpg)
+
+🇻🇪 **Venezuela U20** 2 - 2 🇺🇾 **Uruguay U20**  
+[![Heatmap Venezuela vs Uruguay](https://felipeorma.github.io/imagenes_blog/heatmap_venezuela_uruguay_04_02_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_venezuela_uruguay_04_02_2025.jpg)
+
+📅 **06/02/2025**  
+🇨🇱 **Chile U20** 3 - 1 🇵🇪 **Perú U20**  
+[![Heatmap Chile vs Peru](https://felipeorma.github.io/imagenes_blog/heatmap_chile_peru_06_02_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_chile_peru_06_02_2025.jpg)
+
+🇺🇾 **Uruguay U20** 2 - 0 🇵🇾 **Paraguay U20**  
+[![Heatmap Uruguay vs Paraguay](https://felipeorma.github.io/imagenes_blog/heatmap_uruguay_paraguay_06_02_2025.jpg)](https://felipeorma.github.io/imagenes_blog/heatmap_uruguay_paraguay_06_02_2025.jpg)
+
+By Felipe Ormazabal`
   },
   {
     slug: 'data-driven-sports',
