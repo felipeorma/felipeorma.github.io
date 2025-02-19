@@ -102,7 +102,7 @@ function App() {
     {
       logo: "https://felipeorma.github.io/imagenes/UA%20CHILE.png",
       title: isEnglish ? "Engineering in Business Administration" : "Ingeniería en Administración de Empresas",
-      institution: "Universidad Autonoma de Chile'
+      institution: "Universidad Autonoma de Chile"
     },
     {
       logo: "https://felipeorma.github.io/imagenes/LPDT.png",
