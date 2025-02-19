@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://felipeorma.com",
+  "homepage": "https://felipeorma.github.io/felipeorma.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
