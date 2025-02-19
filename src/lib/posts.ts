@@ -18,6 +18,7 @@ Modern football is increasingly influenced by data analysis and advanced visuali
 4. **🇻🇪 Venezuela (6 pts, GD +3)**  
 5. **🇵🇪 Peru (0 pts, GD -8)**  
 
+<<<<<<< Updated upstream
 ### **Group B**
 1. **🇧🇷 Brazil (10 pts, GD +6)**  
 2. **🇦🇷 Argentina (7 pts, GD +2)**  
@@ -25,6 +26,8 @@ Modern football is increasingly influenced by data analysis and advanced visuali
 4. **🇨🇴 Colombia (4 pts, GD -2)**  
 5. **🇧🇴 Bolivia (1 pts, GD -6)**  
 
+=======
+>>>>>>> Stashed changes
 ## Match Heatmap Images
 
 ### **Group A**
@@ -76,6 +79,30 @@ Modern football is increasingly influenced by data analysis and advanced visuali
 
 🇪🇨 **Ecuador U20** 0 - 0 🇦🇷 **Argentina U20**  
 [🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/ecuador_argentina_B)
+
+📅 **02/02/2025 18:00**  
+🇨🇱 **Chile U20** 2 - 2 🇻🇪 **Venezuela U20**  
+[View heatmap](https://felipeorma.github.io/imagenes_blog/heatmap_chile_venezuela_02_02_2025.jpg)
+
+📅 **02/02/2025 18:00**  
+🇺🇾 **Uruguay U20** 3 - 1 🇵🇾 **Paraguay U20**  
+[View heatmap](https://felipeorma.github.io/imagenes_blog/heatmap_uruguay_paraguay_02_02_2025.jpg)
+
+📅 **04/02/2025 20:30**  
+🇵🇾 **Paraguay U20** 1 - 0 🇵🇪 **Perú U20**  
+[View heatmap](https://felipeorma.github.io/imagenes_blog/heatmap_paraguay_peru_04_02_2025.jpg)
+
+📅 **04/02/2025 20:30**  
+🇻🇪 **Venezuela U20** 2 - 2 🇺🇾 **Uruguay U20**  
+[View heatmap](https://felipeorma.github.io/imagenes_blog/heatmap_venezuela_uruguay_04_02_2025.jpg)
+
+📅 **06/02/2025 17:00**  
+🇨🇱 **Chile U20** 3 - 1 🇵🇪 **Perú U20**  
+[View heatmap](https://felipeorma.github.io/imagenes_blog/heatmap_chile_peru_06_02_2025.jpg)
+
+📅 **06/02/2025 17:00**  
+🇺🇾 **Uruguay U20** 2 - 0 🇵🇾 **Paraguay U20**  
+[View heatmap](https://felipeorma.github.io/imagenes_blog/heatmap_uruguay_paraguay_06_02_2025.jpg)
 
 By Felipe Ormazabal
 .`
