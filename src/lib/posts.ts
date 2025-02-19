@@ -5,7 +5,7 @@ const posts = [
     date: '2025-02-18',
     excerpt: 'Analysis of heatmaps generated during the first phase of the CONMEBOL U20 2025 tournament',
     coverImage: 'https://cdn.conmebol.com/wp-content/uploads/2024/10/sub202025.png',
-    content: `# HeatMaps by Players, Teams, and Matchdays - First Phase CONMEBOL U20 2025
+    content: `# HeatMaps by Players, Teams, and Matchdays - **Group A** - First Phase CONMEBOL U20 2025
 
 Modern football is increasingly influenced by data analysis and advanced visualizations, such as heatmaps. During the first phase of the CONMEBOL U20 2025 tournament, heatmaps have been a key tool for understanding how teams and players performed.
 
@@ -29,12 +29,6 @@ Heatmaps also help identify how strategies changed over the course of the matche
 4. **🇻🇪 Venezuela (6 pts, GD +3)**  
 5. **🇵🇪 Peru (0 pts, GD -8)**  
 
-### **Group B**
-1. **🇨🇴 Colombia (10 pts, GD +3)**  
-2. **🇦🇷 Argentina (8 pts, GD +7)**  
-3. **🇧🇷 Brazil (6 pts, GD -5)**  
-4. **🇪🇨 Ecuador (4 pts, GD -1)**  
-5. **🇧🇴 Bolivia (0 pts, GD -4)**  
 
 ## Match Heatmap Images
 
