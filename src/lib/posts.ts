@@ -5,7 +5,7 @@ const posts = [
     title: 'The Rise of Data-Driven Decision Making in Sports',
     date: '2024-03-21',
     excerpt: 'How data analytics is revolutionizing sports management and performance analysis',
-    coverImage: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1940&fit=crop',
+    coverImage: 'https://media.licdn.com/dms/image/v2/C4E12AQGQHD4BHivb1w/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1641818034525?e=2147483647&v=beta&t=jV_m6S4FGukp4uK-vT2yCcXyOct6lcDOOyk-cHziHTw',
     content: `# The Rise of Data-Driven Decision Making in Sports
 
 In the modern era, data has become an essential tool in decision-making across various industries, and sports are no exception. From recruitment to performance analysis, injury prevention, and fan engagement, data-driven strategies are transforming how teams operate. Football, a traditionally intuition-based sport, is now deeply influenced by analytics, with clubs increasingly investing in advanced metrics to gain a competitive edge.
@@ -48,25 +48,7 @@ Data isn't just used on the field. Teams analyze fan behavior through social med
 
 Data-driven decision-making is no longer a luxury but a necessity in modern sports. Whether it's optimizing performance, preventing injuries, scouting talent, or engaging fans, analytics is reshaping football and other sports at every level. As technology advances, the role of data in sports will only continue to grow, making it an exciting time for both analysts and fans who want to see their favorite teams succeed through science and strategy.`
   },
-  {
-    slug: 'analisis-tactico',
-    title: 'Análisis Táctico: Evolución del Fútbol Moderno',
-    date: '2024-03-20',
-    excerpt: 'Un vistazo profundo a cómo ha evolucionado el fútbol táctico en la última década',
-    coverImage: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1936&fit=crop',
-    content: `# Análisis Táctico: Evolución del Fútbol Moderno
-
-El fútbol moderno ha experimentado cambios significativos en la última década. Los equipos ahora adoptan enfoques más fluidos y dinámicos, alejándose de las formaciones rígidas tradicionales.
-
-## Principales Tendencias
-
-1. Pressing alto
-2. Construcción desde atrás
-3. Falsos nueves
-4. Laterales invertidos
-
-La evolución táctica continúa, y los analistas de datos juegan un papel crucial en esta transformación.`
-  }
+ 
 ];
 
 export interface Post {
