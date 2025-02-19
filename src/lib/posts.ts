@@ -1,42 +1,52 @@
 const posts = [
   {
     slug: 'heatmaps-sudamericano-2025',
-    title: 'HeatMaps individuales, por selecciones y por fecha - Primera fase Sudamericano Conmebol 2025',
+    title: 'HeatMaps by Players, Teams, and Matchdays - First Phase CONMEBOL U20 2025',
     date: '2025-02-18',
-    excerpt: 'Análisis de los mapas de calor generados en la primera fase del Sudamericano Sub-20 2025',
-    coverImage: 'https://diariodeportes.com.co/wp-content/uploads/2024/11/El-Sudamericano-Sub-%E2%80%93-20-del-2025-sera-en-Venezuela.jpg',
-    content: `# HeatMaps individuales, por selecciones y por fecha - Primera fase Sudamericano Conmebol 2025
+    excerpt: 'Analysis of heatmaps generated during the first phase of the CONMEBOL U20 2025 tournament',
+    coverImage: 'https://cdn.conmebol.com/wp-content/uploads/2024/10/sub202025.png',
+    content: `# HeatMaps by Players, Teams, and Matchdays - First Phase CONMEBOL U20 2025
 
-El fútbol moderno está cada vez más influenciado por el análisis de datos y las visualizaciones avanzadas, como los mapas de calor. Durante la primera fase del Sudamericano Sub-20 2025, los heatmaps han sido una herramienta clave para entender cómo se desempeñaron los equipos y los jugadores.
+Modern football is increasingly influenced by data analysis and advanced visualizations, such as heatmaps. During the first phase of the CONMEBOL U20 2025 tournament, heatmaps have been a key tool for understanding how teams and players performed.
 
-## ¿Qué revelan los HeatMaps?
+## What Do HeatMaps Reveal?
 
-### 1. **Patrones de juego individuales**
-Los mapas de calor individuales permiten analizar el comportamiento de cada jugador en el campo. Desde los laterales que constantemente pisan la línea de fondo hasta los mediocampistas con mayor influencia en la circulación del balón. Por ejemplo, los extremos de Brasil han mostrado una alta presencia en las bandas, mientras que el mediocampo de Argentina ha tenido mayor control en zonas interiores.
+### 1. **Individual Playing Patterns**
+Individual heatmaps help analyze each player's movement on the field. From full-backs constantly reaching the final third to midfielders controlling ball circulation. For example, Brazil's wingers have shown strong presence on the flanks, while Argentina's midfield has dominated in central areas.
 
-### 2. **Comparación entre selecciones**
-Cada selección ha presentado patrones de juego distintos
+### 2. **Team Comparisons**
+Each team has exhibited different playing styles.
 
-### 3. **Evolución partido a partido**
-Los HeatMaps también permiten identificar cómo han cambiado las estrategias en cada fecha. En la primera jornada, muchas selecciones apostaron por la presión alta, mientras que en la tercera fecha, algunos equipos ajustaron su posicionamiento para cerrar espacios y asegurar su clasificación.
+### 3. **Match-by-Match Evolution**
+Heatmaps also help identify how strategies changed over the course of the matches. On the first matchday, many teams opted for high pressing, while by the third matchday, some adjusted their positioning to close spaces and secure qualification.
 
-## Tabla final de la fase de grupos
+## Final Standings of the Group Stage
 
-### **Grupo A**
-1. **Uruguay (9 pts, DG +8)**  
-2. **Paraguay (9 pts, DG -3)**  
-3. **Chile (6 pts, DG 0)**  
-4. **Venezuela (6 pts, DG +3)**  
-5. **Perú (0 pts, DG -8)**  
+### **Group A**
+1. **🇺🇾 Uruguay (9 pts, GD +8)**  
+2. **🇵🇾 Paraguay (9 pts, GD -3)**  
+3. **🇨🇱 Chile (6 pts, GD 0)**  
+4. **🇻🇪 Venezuela (6 pts, GD +3)**  
+5. **🇵🇪 Peru (0 pts, GD -8)**  
 
-### **Grupo B**
-1. **Colombia (10 pts, DG +3)**  
-2. **Argentina (8 pts, DG +7)**  
-3. **Brasil (6 pts, DG -5)**  
-4. **Ecuador (4 pts, DG -1)**  
-5. **Bolivia (0 pts, DG -4)**  
+### **Group B**
+1. **🇨🇴 Colombia (10 pts, GD +3)**  
+2. **🇦🇷 Argentina (8 pts, GD +7)**  
+3. **🇧🇷 Brazil (6 pts, GD -5)**  
+4. **🇪🇨 Ecuador (4 pts, GD -1)**  
+5. **🇧🇴 Bolivia (0 pts, GD -4)**  
 
-Por Felipe Ormazabal.`
+## Match Heatmap Images
+
+📅 **31/01/2025 16:30**  
+🇵🇾 **Paraguay U20** 2 - 1 🇨🇱 **Chile U20**  
+[View heatmap](https://felipeorma.github.io/imagenes_blog/heatmap_paraguay_chile_31_01_2025.jpg)
+
+📅 **31/01/2025 16:30**  
+🇻🇪 **Venezuela U20** 1 - 0 🇺🇾 **Uruguay U20**  
+[View heatmap](https://felipeorma.github.io/imagenes_blog/heatmap_venezuela_uruguay_31_01_2025.jpg)
+
+By Felipe Ormazabal.`
   },
   {
     slug: 'data-driven-sports',
@@ -63,24 +73,6 @@ Football has embraced a range of advanced statistics that go beyond traditional 
 - **Pressing Efficiency**: Quantifies how effectively a team or player pressures opponents.
 - **Packing Rate**: Analyzes how many opposing players are bypassed with a pass or dribble, giving insights into a team's progression strategy.
 - **Distance Covered & Sprint Data**: Used in physical conditioning and fitness management.
-
-## Areas of Application
-
-### Physical Conditioning & Injury Prevention
-
-With GPS tracking and biomechanical analysis, clubs monitor player workload, sprinting intensity, and recovery times to prevent injuries. Teams like Liverpool and Bayern Munich use cutting-edge technology to optimize training loads and reduce injury risks.
-
-### Scouting & Recruitment
-
-Modern scouting relies heavily on data. Clubs use machine learning models to identify talent based on key performance indicators, ensuring more cost-effective transfers. Brentford FC and Brighton & Hove Albion are prime examples of clubs successfully using data to sign undervalued players and develop them into top-tier talents.
-
-### Tactical Analysis
-
-Coaches now integrate analytics into match preparation, using tools like video tracking, heat maps, and passing networks to refine game plans. Clubs such as Manchester City and RB Leipzig invest heavily in performance analysis to gain tactical advantages.
-
-### Marketing & Fan Engagement
-
-Data isn't just used on the field. Teams analyze fan behavior through social media engagement, ticket sales trends, and personalized content strategies. Clubs like Real Madrid and Manchester United leverage AI-driven insights to enhance fan experiences and maximize revenue streams.
 
 ## Conclusion
 
