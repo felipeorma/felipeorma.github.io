@@ -40,7 +40,8 @@ Heatmaps also help identify how strategies changed over the course of the matche
 🇻🇪 **Venezuela U20** 1 - 0 🇺🇾 **Uruguay U20**  
 [View heatmap](https://felipeorma.github.io/imagenes_blog/heatmap_venezuela_uruguay_31_01_2025.jpg)
 
-By Felipe Ormazabal.`
+By Felipe Ormazabal
+.`
   },
   {
     slug: 'data-driven-sports',
