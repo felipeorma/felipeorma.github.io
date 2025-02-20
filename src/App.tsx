@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronLeft, ChevronRight, Mail, Linkedin, BarChart2, LineChart, PieChart, TrendingUp, Construction } from 'lucide-react';
+import { Menu, X, ChevronLeft, ChevronRight, Mail, Linkedin, BarChart2, LineChart, PieChart, TrendingUp } from 'lucide-react';
 import { BlogList } from './components/BlogList';
 import { getAllPosts } from './lib/posts';
 
@@ -17,6 +17,49 @@ function App() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [activeSection, setActiveSection] = useState('home');
   const [posts] = useState(getAllPosts());
+
+  const portfolioItems = [
+    {
+      image: "https://felipeorma.github.io/imagenes/1.jpg",
+      title: isEnglish ? "Market Value History" : "Historial de Valor de Mercado"
+    },
+    {
+      image: "https://felipeorma.github.io/imagenes/2.jpg",
+      title: isEnglish ? "Radar Comparison" : "Comparación por Radar"
+    },
+    {
+      image: "https://felipeorma.github.io/imagenes/3.jpg",
+      title: isEnglish ? "Individual Analysis" : "Análisis Individual"
+    },
+    {
+      image: "https://felipeorma.github.io/imagenes/4.jpg",
+      title: isEnglish ? "Individual Analysis" : "Análisis Individual"
+    },
+    {
+      image: "https://felipeorma.github.io/imagenes/5.jpg",
+      title: isEnglish ? "Individual Analysis" : "Análisis Individual"
+    },
+    {
+      image: "https://felipeorma.github.io/imagenes/6.jpg",
+      title: isEnglish ? "League Analysis" : "Análisis de Liga"
+    },
+    {
+      image: "https://felipeorma.github.io/imagenes/7.jpg",
+      title: isEnglish ? "xG Analysis" : "Análisis xG"
+    },
+    {
+      image: "https://felipeorma.github.io/imagenes/8.jpg",
+      title: isEnglish ? "Individual Shot Map Season" : "Mapa de Tiros Individual por Temporada"
+    },
+    {
+      image: "https://felipeorma.github.io/imagenes/9.jpg",
+      title: isEnglish ? "Scouting Tool" : "Herramienta de Scouting"
+    },
+    {
+      image: "https://felipeorma.github.io/imagenes/10.jpg",
+      title: isEnglish ? "Data Insights Season" : "Insights de Datos por Temporada"
+    }
+  ];
 
   const statsData = [
     { label: "Passes", value: 85 },
@@ -49,33 +92,6 @@ function App() {
     "class Scout:",
     "plt.plot(data)",
     "model.fit(X, y)"
-  ];
-
-  const portfolioItems = [
-    {
-      image: "https://felipeorma.github.io/imagenes/scouting-tool.png",
-      title: isEnglish ? "Scouting Tool" : "Herramienta de Scouting"
-    },
-    {
-      image: "https://felipeorma.github.io/imagenes/RADAR.jpeg",
-      title: isEnglish ? "Player Comparison Radar" : "Radar de Comparación de Jugadores"
-    },
-    {
-      image: "https://felipeorma.github.io/imagenes/dashboard.png",
-      title: isEnglish ? "Interactive Dashboards" : "Dashboards Interactivos"
-    },
-    {
-      image: "https://felipeorma.github.io/imagenes/post-match-report.jpeg",
-      title: isEnglish ? "Team Analysis Report" : "Informe de Análisis de Equipo"
-    },
-    {
-      image: "https://felipeorma.github.io/imagenes/dt-analysis.png",
-      title: isEnglish ? "DT Analysis" : "Análisis de DT"
-    },
-    {
-      image: "https://felipeorma.github.io/imagenes/league stats.jpeg",
-      title: isEnglish ? "League Analysis" : "Análisis de Liga"
-    }
   ];
 
   const experienceItems = [
