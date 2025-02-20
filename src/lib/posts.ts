@@ -4,7 +4,7 @@ const posts = [
     title: 'HeatMaps by Players, Teams, and Matchdays - First Phase CONMEBOL U20 2025',
     date: '2025-02-18',
     excerpt: 'Analysis of heatmaps generated during the first phase of the CONMEBOL U20 2025 tournament',
-    coverImage: 'https://felipeorma.github.io/imagenes_blog/cover_sudamericano.jpg',
+    coverImage: 'https://felipeorma.github.io/imagenes_blog/conmebol_sudamericano.jpg',
     content: `# HeatMaps by Players, Teams, and Matchdays - Group Stage - First Phase CONMEBOL U20 2025
 
 Modern football is increasingly influenced by data analysis and advanced visualizations, such as heatmaps. During the first phase of the CONMEBOL U20 2025 tournament, heatmaps have been a key tool for understanding how teams and players performed.
@@ -35,19 +35,41 @@ Modern football is increasingly influenced by data analysis and advanced visuali
 🇻🇪 **Venezuela U20** 1 - 2 🇨🇱 **Chile U20**  
 ![Heatmap Venezuela vs Chile](https://felipeorma.github.io/imagenes_blog/venezuela_chile_a.jpg)
 
-📅 **24/01/2025**  
-🇧🇴 **Bolivia U20** 1 - 2 🇪🇨 **Ecuador U20**  
-![Heatmap Bolivia vs Ecuador](https://felipeorma.github.io/imagenes_blog/bolivia_ecuador_b.jpg)
-
-🇧🇷 **Brazil U20** 0 - 6 🇦🇷 **Argentina U20**  
-![Heatmap Brazil vs Argentina](https://felipeorma.github.io/imagenes_blog/brasil_argentina_b.jpg)
-
 📅 **25/01/2025**  
 🇨🇱 **Chile U20** 1 - 2 🇺🇾 **Uruguay U20**  
 ![Heatmap Chile vs Uruguay](https://felipeorma.github.io/imagenes_blog/chile_uruguay_a.jpg)
 
 🇵🇪 **Peru U20** 0 - 4 🇻🇪 **Venezuela U20**  
 ![Heatmap Peru vs Venezuela](https://felipeorma.github.io/imagenes_blog/peru_venezuela_a.jpg)
+
+📅 **27/01/2025**  
+🇨🇱 **Chile U20** 3 - 2 🇵🇪 **Peru U20**  
+![Heatmap Chile vs Peru](https://felipeorma.github.io/imagenes_blog/chile_peru_a.jpg)
+
+🇺🇾 **Uruguay U20** 6 - 0 🇵🇾 **Paraguay U20**  
+![Heatmap Uruguay vs Paraguay](https://felipeorma.github.io/imagenes_blog/uruguay_paraguay_a.jpg)
+
+📅 **29/01/2025**  
+🇺🇾 **Uruguay U20** 2 - 0 🇵🇪 **Peru U20**  
+![Heatmap Uruguay vs Peru](https://felipeorma.github.io/imagenes_blog/uruguay_peru_a.jpg)
+
+🇵🇾 **Paraguay U20** 1 - 0 🇻🇪 **Venezuela U20**  
+![Heatmap Paraguay vs Venezuela](https://felipeorma.github.io/imagenes_blog/paraguay_venezuela_a.jpg)
+
+📅 **31/01/2025**  
+🇻🇪 **Venezuela U20** 1 - 0 🇺🇾 **Uruguay U20**  
+![Heatmap Venezuela vs Uruguay](https://felipeorma.github.io/imagenes_blog/venezuela_uruguay_a.jpg)
+
+🇵🇾 **Paraguay U20** 2 - 1 🇨🇱 **Chile U20**  
+![Heatmap Paraguay vs Chile](https://felipeorma.github.io/imagenes_blog/paraguay_chile_a.jpg)
+
+### **Group B**
+📅 **24/01/2025**  
+🇧🇴 **Bolivia U20** 1 - 2 🇪🇨 **Ecuador U20**  
+![Heatmap Bolivia vs Ecuador](https://felipeorma.github.io/imagenes_blog/bolivia_ecuador_b.jpg)
+
+🇧🇷 **Brazil U20** 0 - 6 🇦🇷 **Argentina U20**  
+![Heatmap Brazil vs Argentina](https://felipeorma.github.io/imagenes_blog/brasil_argentina_b.jpg)
 
 📅 **26/01/2025**  
 🇧🇴 **Bolivia U20** 1 - 2 🇧🇷 **Brazil U20**  
@@ -77,27 +99,6 @@ Modern football is increasingly influenced by data analysis and advanced visuali
 🇪🇨 **Ecuador U20** 0 - 0 🇦🇷 **Argentina U20**  
 ![Heatmap Ecuador vs Argentina](https://felipeorma.github.io/imagenes_blog/ecuador_argentina_b.jpg)
 
-📅 **02/02/2025**  
-🇨🇱 **Chile U20** 2 - 2 🇻🇪 **Venezuela U20**  
-![Heatmap Chile vs Venezuela](https://felipeorma.github.io/imagenes_blog/chile_venezuela_a.jpg)
-
-🇺🇾 **Uruguay U20** 3 - 1 🇵🇾 **Paraguay U20**  
-![Heatmap Uruguay vs Paraguay](https://felipeorma.github.io/imagenes_blog/uruguay_paraguay_a.jpg)
-
-📅 **04/02/2025**  
-🇵🇾 **Paraguay U20** 1 - 0 🇵🇪 **Perú U20**  
-![Heatmap Paraguay vs Peru](https://felipeorma.github.io/imagenes_blog/paraguay_peru_a.jpg)
-
-🇻🇪 **Venezuela U20** 2 - 2 🇺🇾 **Uruguay U20**  
-![Heatmap Venezuela vs Uruguay](https://felipeorma.github.io/imagenes_blog/venezuela_uruguay_a.jpg)
-
-📅 **06/02/2025**  
-🇨🇱 **Chile U20** 3 - 1 🇵🇪 **Perú U20**  
-![Heatmap Chile vs Peru](https://felipeorma.github.io/imagenes_blog/chile_peru_a.jpg)
-
-🇺🇾 **Uruguay U20** 2 - 0 🇵🇾 **Paraguay U20**  
-![Heatmap Uruguay vs Paraguay](https://felipeorma.github.io/imagenes_blog/uruguay_paraguay_a.jpg)
-
 By Felipe Ormazabal`
   },
   {
@@ -105,7 +106,7 @@ By Felipe Ormazabal`
     title: 'The Rise of Data-Driven Decision Making in Sports',
     date: '2024-03-21',
     excerpt: 'How data analytics is revolutionizing sports management and performance analysis',
-    coverImage: 'https://felipeorma.github.io/imagenes_blog/data_driven_cover.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1560525821-d5615ef80c69?q=80&w=1920&fit=crop',
     content: `# The Rise of Data-Driven Decision Making in Sports
 
 In the modern era, data has become an essential tool in decision-making across various industries, and sports are no exception. From recruitment to performance analysis, injury prevention, and fan engagement, data-driven strategies are transforming how teams operate. Football, a traditionally intuition-based sport, is now deeply influenced by analytics, with clubs increasingly investing in advanced metrics to gain a competitive edge.
