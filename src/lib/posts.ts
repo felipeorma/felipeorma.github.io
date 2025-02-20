@@ -4,7 +4,7 @@ const posts = [
     title: 'HeatMaps by Players, Teams, and Matchdays - First Phase CONMEBOL U20 2025',
     date: '2025-02-18',
     excerpt: 'Analysis of heatmaps generated during the first phase of the CONMEBOL U20 2025 tournament',
-    coverImage: 'https://cdn.conmebol.com/wp-content/uploads/2024/10/sub202025.png',
+    coverImage: 'https://felipeorma.github.io/imagenes_blog/cover_sudamericano.jpg',
     content: `# HeatMaps by Players, Teams, and Matchdays - Group Stage - First Phase CONMEBOL U20 2025
 
 Modern football is increasingly influenced by data analysis and advanced visualizations, such as heatmaps. During the first phase of the CONMEBOL U20 2025 tournament, heatmaps have been a key tool for understanding how teams and players performed.
@@ -30,62 +30,82 @@ Modern football is increasingly influenced by data analysis and advanced visuali
 ### **Group A**
 📅 **23/01/2025**  
 🇵🇪 **Peru U20** 1 - 2 🇵🇾 **Paraguay U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/peru_paraguay_A.png)
+![Heatmap Peru vs Paraguay](https://felipeorma.github.io/imagenes_blog/peru_paraguay_a.jpg)
 
 🇻🇪 **Venezuela U20** 1 - 2 🇨🇱 **Chile U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/venezuela_chile_A)
+![Heatmap Venezuela vs Chile](https://felipeorma.github.io/imagenes_blog/venezuela_chile_a.jpg)
 
 📅 **24/01/2025**  
 🇧🇴 **Bolivia U20** 1 - 2 🇪🇨 **Ecuador U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/bolivia_ecuador_B)
+![Heatmap Bolivia vs Ecuador](https://felipeorma.github.io/imagenes_blog/bolivia_ecuador_b.jpg)
 
 🇧🇷 **Brazil U20** 0 - 6 🇦🇷 **Argentina U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/brazil_argentina_B)
+![Heatmap Brazil vs Argentina](https://felipeorma.github.io/imagenes_blog/brasil_argentina_b.jpg)
 
 📅 **25/01/2025**  
 🇨🇱 **Chile U20** 1 - 2 🇺🇾 **Uruguay U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/chile_uruguay_A)
+![Heatmap Chile vs Uruguay](https://felipeorma.github.io/imagenes_blog/chile_uruguay_a.jpg)
 
 🇵🇪 **Peru U20** 0 - 4 🇻🇪 **Venezuela U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/peru_venezuela_A)
+![Heatmap Peru vs Venezuela](https://felipeorma.github.io/imagenes_blog/peru_venezuela_a.jpg)
 
 📅 **26/01/2025**  
 🇧🇴 **Bolivia U20** 1 - 2 🇧🇷 **Brazil U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/bolivia_brazil_B)
+![Heatmap Bolivia vs Brazil](https://felipeorma.github.io/imagenes_blog/bolivia_brasil_b.jpg)
 
 🇦🇷 **Argentina U20** 1 - 1 🇨🇴 **Colombia U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/argentina_colombia_B)
+![Heatmap Argentina vs Colombia](https://felipeorma.github.io/imagenes_blog/argentina_colombia_b.jpg)
 
 📅 **28/01/2025**  
 🇦🇷 **Argentina U20** 1 - 0 🇧🇴 **Bolivia U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/argentina_bolivia_B)
+![Heatmap Argentina vs Bolivia](https://felipeorma.github.io/imagenes_blog/argentina_bolivia_b.jpg)
 
 🇨🇴 **Colombia U20** 1 - 0 🇪🇨 **Ecuador U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/colombia_ecuador_B)
+![Heatmap Colombia vs Ecuador](https://felipeorma.github.io/imagenes_blog/colombia_ecuador_b.jpg)
 
 📅 **30/01/2025**  
 🇨🇴 **Colombia U20** 3 - 2 🇧🇴 **Bolivia U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/colombia_bolivia_B)
+![Heatmap Colombia vs Bolivia](https://felipeorma.github.io/imagenes_blog/colombia_bolivia_b.jpg)
 
 🇪🇨 **Ecuador U20** 2 - 3 🇧🇷 **Brazil U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/ecuador_brazil_B)
+![Heatmap Ecuador vs Brazil](https://felipeorma.github.io/imagenes_blog/ecuador_brasil_b.jpg)
 
 📅 **01/02/2025**  
 🇧🇷 **Brazil U20** 0 - 1 🇨🇴 **Colombia U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/brazil_colombia_B)
+![Heatmap Brazil vs Colombia](https://felipeorma.github.io/imagenes_blog/brasil_colombia_b.jpg)
 
 🇪🇨 **Ecuador U20** 0 - 0 🇦🇷 **Argentina U20**  
-[🔽 Download HeatMap](https://felipeorma.github.io/imagenes_blog/ecuador_argentina_B)
+![Heatmap Ecuador vs Argentina](https://felipeorma.github.io/imagenes_blog/ecuador_argentina_b.jpg)
 
-By Felipe Ormazabal
-.`
+📅 **02/02/2025**  
+🇨🇱 **Chile U20** 2 - 2 🇻🇪 **Venezuela U20**  
+![Heatmap Chile vs Venezuela](https://felipeorma.github.io/imagenes_blog/chile_venezuela_a.jpg)
+
+🇺🇾 **Uruguay U20** 3 - 1 🇵🇾 **Paraguay U20**  
+![Heatmap Uruguay vs Paraguay](https://felipeorma.github.io/imagenes_blog/uruguay_paraguay_a.jpg)
+
+📅 **04/02/2025**  
+🇵🇾 **Paraguay U20** 1 - 0 🇵🇪 **Perú U20**  
+![Heatmap Paraguay vs Peru](https://felipeorma.github.io/imagenes_blog/paraguay_peru_a.jpg)
+
+🇻🇪 **Venezuela U20** 2 - 2 🇺🇾 **Uruguay U20**  
+![Heatmap Venezuela vs Uruguay](https://felipeorma.github.io/imagenes_blog/venezuela_uruguay_a.jpg)
+
+📅 **06/02/2025**  
+🇨🇱 **Chile U20** 3 - 1 🇵🇪 **Perú U20**  
+![Heatmap Chile vs Peru](https://felipeorma.github.io/imagenes_blog/chile_peru_a.jpg)
+
+🇺🇾 **Uruguay U20** 2 - 0 🇵🇾 **Paraguay U20**  
+![Heatmap Uruguay vs Paraguay](https://felipeorma.github.io/imagenes_blog/uruguay_paraguay_a.jpg)
+
+By Felipe Ormazabal`
   },
   {
     slug: 'data-driven-sports',
     title: 'The Rise of Data-Driven Decision Making in Sports',
     date: '2024-03-21',
     excerpt: 'How data analytics is revolutionizing sports management and performance analysis',
-    coverImage: 'https://media.licdn.com/dms/image/v2/C4E12AQGQHD4BHivb1w/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1641818034525?e=2147483647&v=beta&t=jV_m6S4FGukp4uK-vT2yCcXyOct6lcDOOyk-cHziHTw',
+    coverImage: 'https://felipeorma.github.io/imagenes_blog/data_driven_cover.jpg',
     content: `# The Rise of Data-Driven Decision Making in Sports
 
 In the modern era, data has become an essential tool in decision-making across various industries, and sports are no exception. From recruitment to performance analysis, injury prevention, and fan engagement, data-driven strategies are transforming how teams operate. Football, a traditionally intuition-based sport, is now deeply influenced by analytics, with clubs increasingly investing in advanced metrics to gain a competitive edge.
