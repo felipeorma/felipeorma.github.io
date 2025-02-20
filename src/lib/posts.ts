@@ -105,7 +105,7 @@ By Felipe Ormazabal`
     title: 'The Rise of Data-Driven Decision Making in Sports',
     date: '2024-03-21',
     excerpt: 'How data analytics is revolutionizing sports management and performance analysis',
-    coverImage: 'https://felipeorma.github.io/imagenes_blog/data_driven_cover.jpg',
+    coverImage: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1936&fit=crop',
     content: `# The Rise of Data-Driven Decision Making in Sports
 
 In the modern era, data has become an essential tool in decision-making across various industries, and sports are no exception. From recruitment to performance analysis, injury prevention, and fan engagement, data-driven strategies are transforming how teams operate. Football, a traditionally intuition-based sport, is now deeply influenced by analytics, with clubs increasingly investing in advanced metrics to gain a competitive edge.
